@@ -27,7 +27,11 @@ Route::get('/contacts', function () {
     return view('contacts');
 });
 
-Route::get('/article', function () {
-    return view('article');
-});
+Route::get('article/{id}', 'ArticleController@show');
 
+
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

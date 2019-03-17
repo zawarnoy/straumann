@@ -19,7 +19,7 @@
 
 	<section id="content">
 		<div class="thumbnail">
-			<img src="{{ asset('img/content.jpg') }}" alt="content">
+			<img src="{{ \TCG\Voyager\Facades\Voyager::image($post->image) }}" alt="content">
 		</div>
 		<div class="inner">
 			<div class="text">

@@ -4,19 +4,15 @@ Route::get('/', function () {
     return view('main');
 });
 
-Route::get('/clinics', function () {
-    return view('clinics');
-});
+Route::get('/clinics', 'ClinicController@index');
 
-Route::get('/clinic', function () {
-    return view('clinic');
-});
+Route::get('/clinics/{id}', 'ClinicController@show');
 
 Route::get('/contacts', function () {
     return view('contacts');
 });
 
-Route::get('article/{id}', 'ArticleController@show');
+Route::get('articles/{id}', 'ArticleController@show');
 
 
 

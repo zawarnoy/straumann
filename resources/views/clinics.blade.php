@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Title')
+@section('title', 'Клиники')
 
 @section('content')
     <section id="page__title">
@@ -25,15 +25,15 @@
 
             <ul class="list__clinics">
 
-                @for ($i = 0; $i < 20; $i ++)
+                @foreach ($clinics as $clinic)
                     <li>
                         <div class="wr">
-                            <img src="{{ asset('img/clinic.jpg') }}" alt="clinic">
-                            <div class="title">SIA SVENATA</div>
-                            <a href="#"></a>
+                            <img src="{{ \TCG\Voyager\Facades\Voyager::image($clinic->image) }}" alt="clinic">
+                            <div class="title">{{ $clinic->name }}</div>
+                            <a href="{{ url("/clinics/{$clinic->id}") }}"></a>
                         </div>
                     </li>
-                @endfor
+                @endforeach
 
             </ul>
 

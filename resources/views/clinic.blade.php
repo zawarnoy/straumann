@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Title')
+@section('title', $clinic->name)
 
 @section('content')
 
@@ -12,7 +12,7 @@
                     <li>Статьи</li>
                 </ul>
             </div>
-            <div class="bt"><span>Страница клиники</span></div>
+            <div class="bt"><span>{{ $clinic->name }}</span></div>
             <div class="clearfix"></div>
         </div>
     </section>
@@ -20,18 +20,22 @@
     <section id="page">
         <div class="inner">
             <div class="nav">
-                <a href="#" class="prev">Atgal į naujienų sąrašą</a>
-                <a href="#" class="next">Atgal į naujienų sąrašą</a>
+                @if ($previous)
+                    <a href="{{ url("clinics/{$previous}") }}" class="prev">Предыдущая</a>
+                @endif
+                @if ($next)
+                    <a href="{{ url("clinics/{$next}") }}" class="next">Следующая</a>
+                 @endif
                 <div class="clearfix"></div>
             </div>
             <div class="inn">
-                <img src="img/clinik.jpg" alt="clinik">
+                <img src="{{ \TCG\Voyager\Facades\Voyager::image($clinic->image) }}" alt="clinik">
                 <div class="text">
-                    <div class="title">SIA Dentists</div>
-                    <span>SIA Dentists</span>
-                    <p class="email"><a href="mailto:dentists-info@inbox.lv">dentists-info@inbox.lv</a></p>
-                    <p class="address">Republikas 19, Liepāja</p>
-                    <p class="url"><a href="www.siadentists.lv" target="_blank">www.siadentists.lv</a></p>
+                    <div class="title">{{ $clinic->name }}</div>
+                    <span> {{ $clinic->description }}</span>
+                    <p class="email">{{ $clinic->email }}</p>
+                    <p class="address">{{ $clinic->address }}</p>
+                    <p class="url"><a href="{{ $clinic->url }}" target="_blank"> {{ $clinic->url }}</a></p>
                 </div>
             </div>
             <div class="clearfix"></div>

@@ -46,9 +46,15 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        return view('article', [
-            'post' => Post::findOrFail($id)]
-        );
+        $post = Post::findOrFail($id);
+
+        $params = [
+            'post'      => $post,
+            'next'      => Post::where('id', '<', $post->id)->max('id'),
+            'previous'  => Post::where('id', '>', $post->id)->min('id'),
+        ];
+
+        return view('article', $params);
     }
 
     /**

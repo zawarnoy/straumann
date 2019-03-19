@@ -160,7 +160,7 @@ header{position: absolute; top: 27px; left: 50%; margin: 0 0 0 -860px; width: 10
 		#page .nav a.prev{padding: 0 0 0 20px; background: url("../img/arr_l.png") 0 50% no-repeat;}
 		#page .nav a.next{float: right; padding: 0 20px 0 0; background: url("../img/arr_r.png") 100% 50% no-repeat;}
 	#page .inn{font-size: 16px; line-height: 1.5;}
-		#page .inn img{float: left; margin-right: 35px;}
+		#page .inn img{float: left; margin-right: 35px; max-width: 100%}
 		#page .inn .text{float: left;}
 			#page .inn .text .title{font-size: 18px; font-weight: 700; margin-bottom: 20px;}
 			#page .inn .text p{padding: 3px 0 3px 35px;}
@@ -168,8 +168,6 @@ header{position: absolute; top: 27px; left: 50%; margin: 0 0 0 -860px; width: 10
 				#page .inn .text p.address{background: url("../img/address.png") 0 50% no-repeat;}
 				#page .inn .text p.url{background: url("../img/url.png") 0 50% no-repeat;}
 				#page .inn .text p a{color: #000;}
-
-
 
 
 

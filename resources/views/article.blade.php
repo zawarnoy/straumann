@@ -18,9 +18,12 @@
     </section>
 
     <section id="content">
-        <div class="thumbnail">
-            <img src="{{ \TCG\Voyager\Facades\Voyager::image($post->image) }}" alt="content">
-        </div>
+
+        @if ($post->image)
+            <div class="thumbnail">
+                <img src="{{ \TCG\Voyager\Facades\Voyager::image($post->image) }}" alt="content">
+            </div>
+        @endif
         <div class="inner">
             <div class="text">
 

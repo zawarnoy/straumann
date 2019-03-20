@@ -58,11 +58,7 @@
                             <div class="title">{{ $doctor->name }}</div>
                             <span>{{ $doctor->position }}</span>
                             <div class="excerpt">
-                                <p>KLĪNIKA: Zobārstniecības centrs “Dentists”</p>
-                                <p>TĀLRUNIS: +371 63426444, +371 29264885</p>
-                                <p>E-PASTS: dentists-info@inbox.lv</p>
-                                <p>WEB: http://siadentists.lv/index.html</p>
-                                <p>ADRESE: Ул. Республики, 19, Лиепая, LV-3401</p>
+                                {{ $doctor->contact }}
                             </div>
                         </li>
                     @endforeach

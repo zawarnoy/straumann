@@ -16,6 +16,8 @@ class AdvantageController extends Controller
             abort(404, 'Page not found');
         }
 
-        return view('article', $post);
+        return view('article', [
+            'post' => $post,
+        ]);
     }
 }

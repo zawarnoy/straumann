@@ -205,9 +205,9 @@ header{position: absolute; top: 27px; left: 50%; margin: 0 0 0 -860px; width: 10
 
 
 
-footer{padding: 40px 0; color: #fff; background: #169249; line-height: 1.5;}
+footer{padding: 20px 0; color: #fff; background: #169249; line-height: 1.5;}
 	footer .coll{float: left;}
-	footer .title{font-weight: 700; text-transform: uppercase; margin-bottom: 35px;}
+	footer .title{font-weight: 700; text-transform: uppercase; margin-bottom: 10px;}
 	footer .coll.coll__ct{float: right; margin-right: 90px;}
 	footer .coll.coll__ct p{margin-bottom: 10px;}
 	footer .btn{color: #fff; border: 1px solid #fff; width: 100%; letter-spacing: 2px; margin-top: 20px;}
@@ -407,6 +407,10 @@ input,textarea,select,button{-webkit-appearance: none; box-sizing: border-box; f
 	#clinics .list__clinics li{margin: 0 0 20px!important; width: calc(100%/3); box-sizing: border-box; padding: 0 10px;}
 }
 
+@media screen and (min-width: 768px) {
+	footer span {
+		padding-left: 10px;}
+}
 
 @media screen and (max-width: 767px){
 	.bt{font-size: 20px; padding-bottom: 30px;}
@@ -443,6 +447,8 @@ input,textarea,select,button{-webkit-appearance: none; box-sizing: border-box; f
 
 	#contacts .text{margin: 0 0 20px; float: none;}
 	#contacts .filters li{margin-right: 20px; font-size: 15px;}
+
+	footer span { display: block; }
 }
 
 

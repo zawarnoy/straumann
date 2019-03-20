@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Title')
+@section('title', 'Straumann')
 
 @section('content')
 
@@ -9,15 +9,15 @@
         <div class="inner">
             <div class="slider__promo">
 
-                @for ($i = 0; $i < 5; $i++)
+                @foreach ($sliderCategory->posts as $post)
                     <div>
                         <div class="inn inn_promo">
-                            <div class="title title_promo">Улыбка, которая Вас окрыляет</div>
-                            <p class="text_promo">Straumann – no{{ $i }} выбор пациентов и врачеи по всему миру</p>
+                            <div class="title title_promo">{{ $post->title }}</div>
+                            <p class="text_promo">{!! html_entity_decode($post->body) !!}</p>
                             <a href="#" class="btn btn-green btn-promo">найти клинику</a>
                         </div>
                     </div>
-                @endfor
+                @endforeach
             </div>
             <div class="clearfix"></div>
         </div>
@@ -43,70 +43,49 @@
         </div>
     </section>
 
-    <section id="advantages">
-        <div class="inner">
-            <div class="bt"><span>преимущества</span></div>
-            <ul>
-                <li>
-                    <span>1</span>
-                    <p>STRAUMANN: No 1. выбор пациентов<br> и врачей по всему миру</p>
-                    <i></i>
-                </li>
-                <li>
-                    <span>2</span>
-                    <p>Самые высокие показатели <br>приживаемости</p>
-                    <i></i>
-                </li>
-                <li>
-                    <span>3</span>
-                    <p>Уникальный сплав <br>– Roxolid</p>
-                    <i></i>
-                </li>
-                <li>
-                    <span>4</span>
-                    <p>Уникальная поверхность имплантата <br>– SLActive</p>
-                    <i></i>
-                </li>
-                <li>
-                    <span>5</span>
-                    <p>Производитель, которому <br>можно доверять</p>
-                    <i></i>
-                </li>
-                <li>
-                    <span>6</span>
-                    <p>Международное обязательство <br>на всю жизнь</p>
-                    <i></i>
-                </li>
-            </ul>
-            <div class="clearfix"></div>
-        </div>
-    </section>
+    @if (count($advantagesCategory->posts))
+        <section id="advantages">
+            <div class="inner">
 
-    <section id="news">
-        <div class="inner">
-            <div class="bt"><span>Новости</span></div>
-            <ul>
+                <div class="bt"><span>преимущества</span></div>
+                <ul>
+                    @php ($counter = 1)
+                    @foreach($advantagesCategory->posts as $post)
+                        <li>
+                            <span>{{ $counter }}</span>
+                            <p>{{ $post->title }}</p>
+                            <i></i>
+                        </li>
+                        @php ($counter++)
+                    @endforeach
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </section>
+    @endif
 
-                <!-- NEWS BLOCK !-->
-
-                @for ($i = 0; $i < 3; $i++)
-                    <li>
-                        <div class="wr">
-                            <img src="img/news.jpg" alt="news">
-                            <div class="title"><a href="#">Др.гиртс шалмс о том, почему зуб должен быть восстановлен как
-                                    можно скорее</a></div>
-                            <div class="excerpt">RSU Stomatoloģijas institūta Mutes, sejas un žokļu ķirurgs un klīnikas
-                                virsārsts Ģirts Šalms stāsta, kāpēc ir tik svarīgi pēc iespējas ātrāk aizstāt zaudētus
-                                zobus
-                                un kas notiek, ja tas netiek darīts.
+    @if (count($newsCategory->posts))
+        <section id="news">
+            <div class="inner">
+                <div class="bt"><span>Новости</span></div>
+                <ul>
+                    @foreach ($newsCategory->posts as $post)
+                        <li>
+                            <div class="wr">
+                                <img src="{{ \TCG\Voyager\Facades\Voyager::image($post->image) }}" alt="news">
+                                <div class="title"><a href="{{ url("articles/{$post->id}") }}">{{ $post->title }}</a>
+                                </div>
+                                <div class="excerpt">{{ $post->excerpt }}</div>
+                                <a href="{{ url("articles/{$post->id}") }}" class="more"></a>
                             </div>
-                            <a href="#" class="more"></a>
-                        </div>
-                    </li>
-                @endfor
-            </ul>
-            <div class="clearfix"></div>
-            <div class="center"><a href="#" class="btn btn-white btn-b">Все новости</a></div>
-        </div>
-    </section>
+                        </li>
+                    @endforeach
+                </ul>
+                <div class="clearfix"></div>
+                @if (false)
+                    <div class="center"><a href="#" class="btn btn-white btn-b loadMore">Загрузить ещё</a></div>
+                @endif
+            </div>
+        </section>
+    @endif
 @stop

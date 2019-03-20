@@ -1,28 +1,10 @@
 <footer>
     <div class="inner">
-        <div class="coll">
-            <div class="title">Возможности лечения</div>
-            <ul>
-                <li><a href="#">Когда нехватает всех зубов</a></li>
-                <li><a href="#">Когда нехватает нескольких зубов</a></li>
-                <li><a href="#">Когда нехватает одного зуба</a></li>
-                <li><a href="#">Протезы или имплантаты</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">Преимущества</a></li>
-                <li><a href="#">О имплантатах</a></li>
-                <li><a href="#">Возможности лечения</a></li>
-                <li><a href="#">Новости</a></li>
-                <li><a href="#">Клиники</a></li>
-                <li><a href="#">Цены</a></li>
-            </ul>
-        </div>
-        <div class="coll coll__ct">
-            <div class="title">Контакты</div>
-            <p>Представители STRAUMANN в Латвии</p>
-            <p>Tел.: Клиники</p>
-            <p>Eл.п.: info@straumann.lv</p>
-            <a href="#feedback" class="btn btn-white open__modal">Написать нам</a>
+        <div class="coll center">
+            <span class="title col-xs-12">Контакты</span>
+            <span>Представители STRAUMANN в Латвии</span>
+            <span>Tел.: Клиники</span>
+            <span>Eл.п.: info@straumann.lv</span>
         </div>
         <div class="clearfix"></div>
     </div>

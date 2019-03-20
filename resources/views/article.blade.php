@@ -30,9 +30,9 @@
 			</div>
 
 			<div class="actions">
-				<p class="prev"><a href="#">Atgal į naujienų sąrašą</a></p>
+				<p class="prev"><a href="{{ url('/') }}">Главная</a></p>
 				<div class="share">
-					<span>Buvo naudinga. Pasidalinkite:</span>
+					<span>Соц. сети:</span>
 					<ul>
 						<li><a href="#" target="_blank"><img src="{{ asset('img/facebook.png') }}" alt="facebook"></a></li>
 						<li><a href="#" target="_blank"><img src="{{ asset('img/instagram.png') }}" alt="instagram"></a></li>

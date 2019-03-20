@@ -9,7 +9,7 @@
         <div class="inner">
             <div class="slider__promo">
 
-                @foreach ($sliderCategory->posts as $post)
+                @foreach ($sliderPosts as $post)
                     <div>
                         <div class="inn inn_promo">
                             <div class="title title_promo">{{ $post->title }}</div>
@@ -43,18 +43,20 @@
         </div>
     </section>
 
-    @if (count($advantagesCategory->posts))
+    @if (count($advantagesPosts))
         <section id="advantages">
             <div class="inner">
 
                 <div class="bt"><span>преимущества</span></div>
                 <ul>
                     @php ($counter = 1)
-                    @foreach($advantagesCategory->posts as $post)
+                    @foreach($advantagesPosts as $post)
                         <li>
+                            <a href="{{ url("advantages/{$post->id}") }}">
                             <span>{{ $counter }}</span>
-                            <p>{{ $post->title }}</p>
+                            <p>{{ $post->excerpt }}</p>
                             <i></i>
+                            </a>
                         </li>
                         @php ($counter++)
                     @endforeach
@@ -64,12 +66,12 @@
         </section>
     @endif
 
-    @if (count($newsCategory->posts))
+    @if (count($newsPosts))
         <section id="news">
             <div class="inner">
                 <div class="bt"><span>Новости</span></div>
                 <ul>
-                    @foreach ($newsCategory->posts as $post)
+                    @foreach ($newsPosts as $post)
                         <li>
                             <div class="wr">
                                 <img src="{{ \TCG\Voyager\Facades\Voyager::image($post->image) }}" alt="news">

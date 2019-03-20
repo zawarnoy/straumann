@@ -56,8 +56,8 @@ class ArticleController extends Controller
 
         $params = [
             'post'      => $post,
-            'previous'      => Post::where('id', '<', $post->id)->where('category_id', '=', $category->id)->max('id'),
-            'next'  => Post::where('id', '>', $post->id)->where('category_id', '=', $category->id)->min('id'),
+            'previous'  => Post::where('id', '<', $post->id)->where('category_id', '=', $category->id)->max('id'),
+            'next'      => Post::where('id', '>', $post->id)->where('category_id', '=', $category->id)->min('id'),
         ];
 
         return view('article', $params);

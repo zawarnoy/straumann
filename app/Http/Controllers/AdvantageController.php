@@ -18,6 +18,8 @@ class AdvantageController extends Controller
 
         return view('article', [
             'post' => $post,
+            'previous'  => Post::where('id', '<', $post->id)->where('category_id', '=', $category->id)->max('id'),
+            'next'      => Post::where('id', '>', $post->id)->where('category_id', '=', $category->id)->min('id'),
         ]);
     }
 }

@@ -42,6 +42,10 @@
         </div>
     </section>
 
+    <div class="inner">
+        {!! $clinic->map  !!}
+    </div>
+
     @if (count($clinic->doctors))
         <section id="specialist">
             <div class="inner">

@@ -19,6 +19,18 @@ body{
 	overflow-x: hidden;
 }
 
+html {
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	margin: 0px;
+	min-height: 100%;
+	width: 100%;
+}
+
 /*.hs{overflow: hidden!important;}*/
 
 .inner{width: 1140px; margin: 0 auto; box-sizing: border-box;}
@@ -154,11 +166,12 @@ header{position: absolute; top: 27px; left: 50%; margin: 0 0 0 -860px; width: 10
 
 
 #page{padding: 40px 0; background: #fbfbfb;}
-	#page .nav{padding-bottom: 40px;}
-	#page .nav a{display: block; float: left; color: #000;}
-		#page .nav a:hover{color: #c4c4c4;}
-		#page .nav a.prev{padding: 0 0 0 20px; background: url("../img/arr_l.png") 0 50% no-repeat;}
-		#page .nav a.next{float: right; padding: 0 20px 0 0; background: url("../img/arr_r.png") 100% 50% no-repeat;}
+	.nav{padding-bottom: 40px;}
+	.nav a{display: block; float: left; color: #000;}
+		.nav a:hover{color: #c4c4c4;}
+		.nav { margin-top: 10px; }
+		.nav a.prev{padding: 0 0 0 20px; background: url("../img/arr_l.png") 0 50% no-repeat;}
+		.nav a.next{float: right; padding: 0 20px 0 0; background: url("../img/arr_r.png") 100% 50% no-repeat;}
 	#page .inn{font-size: 16px; line-height: 1.5;}
 		#page .inn img{float: left; margin-right: 35px; max-width: 100%}
 		#page .inn .text{float: left;}

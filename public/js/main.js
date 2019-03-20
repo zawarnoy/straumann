@@ -249,11 +249,11 @@ $(document).ready(function() {
         let $listClinics = $('.list__clinics'),
             $stub = $('.stub');
 
-        $stub.fadeIn(200);
+        $stub.fadeIn(400);
 
         $.get('/cities/clinics', { 'id' : $(this).attr('data-id')} ,function (data) {
             $listClinics.html(data);
-            $stub.fadeOut(200);
+            $stub.fadeOut(400);
         });
 
     });

@@ -52,10 +52,8 @@
                     @php ($counter = 1)
                     @foreach($advantagesPosts as $post)
                         <li>
-
                             <span>{{ $counter }}</span>
                             <p>{{ $post->excerpt }}</p>
-
                             <a href="{{ url("advantages/{$post->id}") }}"><i></i></a>
                         </li>
                         @php ($counter++)

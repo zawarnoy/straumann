@@ -11,7 +11,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
-
+    <div class="stub"></div>
     @include('parts.header')
 
     @yield('content')

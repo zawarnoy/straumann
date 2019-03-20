@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\City;
 use App\Clinic;
 
 class ClinicController extends Controller
@@ -9,10 +10,11 @@ class ClinicController extends Controller
     public function index()
     {
         $params = [
+            'cities'  => City::all(),
             'clinics' => Clinic::all(),
         ];
 
-        return view('clinics', $params);
+        return view('clinics.clinics', $params);
     }
 
     public function show($id)
@@ -25,7 +27,7 @@ class ClinicController extends Controller
             'next'      => Clinic::where('id', '>', $clinic->id)->min('id'),
         ];
 
-        return view('clinic', $params);
+        return view('clinics.clinic', $params);
     }
 
 }

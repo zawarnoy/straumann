@@ -12,19 +12,17 @@
 
     <section id="clinics">
         <div class="inner">
-            <div class="select__city">
-                <span>Выбрать город</span>
-                <ul>
-                    <li><a href="#">Москва</a></li>
-                    <li><a href="#">Москва</a></li>
-                    <li><a href="#">Москва</a></li>
-                    <li><a href="#">Москва</a></li>
-                    <li><a href="#">Москва</a></li>
-                </ul>
+            <div class="custom-select select-city" style="width:300px;">
+                <select>
+                    <option value="">Все города</option>
+                    <option value="0">Все города</option>
+                    @foreach ($cities as $city)
+                        <option value="{{ $city->id }}">{{ $city->name }}</option>
+                    @endforeach
+                </select>
             </div>
 
             <ul class="list__clinics">
-
                 @foreach ($clinics as $clinic)
                     <li>
                         <div class="wr">
@@ -34,7 +32,6 @@
                         </div>
                     </li>
                 @endforeach
-
             </ul>
 
             <div class="clearfix"></div>

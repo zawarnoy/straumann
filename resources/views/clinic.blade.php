@@ -25,7 +25,7 @@
                 @endif
                 @if ($next)
                     <a href="{{ url("clinics/{$next}") }}" class="next">Следующая</a>
-                 @endif
+                @endif
                 <div class="clearfix"></div>
             </div>
             <div class="inn">
@@ -42,50 +42,30 @@
         </div>
     </section>
 
-    <section id="specialist">
-        <div class="inner">
-            <div class="bt"><span>CПЕЦИАЛИСТЫ</span></div>
+    @if (count($clinic->doctors))
+        <section id="specialist">
+            <div class="inner">
+                <div class="bt"><span>CПЕЦИАЛИСТЫ</span></div>
 
-            <ul>
-                <li>
-                    <img src="img/user.jpg" alt="user">
-                    <div class="title">MODRIS ROMANOVSKIS</div>
-                    <span>Зубной врач</span>
-                    <div class="excerpt">
-                        <p>KLĪNIKA: Zobārstniecības centrs “Dentists”</p>
-                        <p>TĀLRUNIS: +371 63426444, +371 29264885</p>
-                        <p>E-PASTS: dentists-info@inbox.lv</p>
-                        <p>WEB: http://siadentists.lv/index.html</p>
-                        <p>ADRESE: Ул. Республики, 19, Лиепая, LV-3401</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="img/user.jpg" alt="user">
-                    <div class="title">MODRIS ROMANOVSKIS</div>
-                    <span>Зубной врач</span>
-                    <div class="excerpt">
-                        <p>KLĪNIKA: Zobārstniecības centrs “Dentists”</p>
-                        <p>TĀLRUNIS: +371 63426444, +371 29264885</p>
-                        <p>E-PASTS: dentists-info@inbox.lv</p>
-                        <p>WEB: http://siadentists.lv/index.html</p>
-                        <p>ADRESE: Ул. Республики, 19, Лиепая, LV-3401</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="img/user.jpg" alt="user">
-                    <div class="title">MODRIS ROMANOVSKIS</div>
-                    <span>Зубной врач</span>
-                    <div class="excerpt">
-                        <p>KLĪNIKA: Zobārstniecības centrs “Dentists”</p>
-                        <p>TĀLRUNIS: +371 63426444, +371 29264885</p>
-                        <p>E-PASTS: dentists-info@inbox.lv</p>
-                        <p>WEB: http://siadentists.lv/index.html</p>
-                        <p>ADRESE: Ул. Республики, 19, Лиепая, LV-3401</p>
-                    </div>
-                </li>
-            </ul>
+                <ul>
+                    @foreach ($clinic->doctors as $doctor)
+                        <li>
+                            <img src="{{ \TCG\Voyager\Facades\Voyager::image($doctor->photo) }}" alt="user">
+                            <div class="title">{{ $doctor->name }}</div>
+                            <span>{{ $doctor->position }}</span>
+                            <div class="excerpt">
+                                <p>KLĪNIKA: Zobārstniecības centrs “Dentists”</p>
+                                <p>TĀLRUNIS: +371 63426444, +371 29264885</p>
+                                <p>E-PASTS: dentists-info@inbox.lv</p>
+                                <p>WEB: http://siadentists.lv/index.html</p>
+                                <p>ADRESE: Ул. Республики, 19, Лиепая, LV-3401</p>
+                            </div>
+                        </li>
+                    @endforeach
+                </ul>
 
-            <div class="clearfix"></div>
-        </div>
-    </section>
+                <div class="clearfix"></div>
+            </div>
+        </section>
+    @endif
 @stop

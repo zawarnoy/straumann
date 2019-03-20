@@ -1,6 +1,6 @@
 <header>
     <div class="inner">
-        <div class="logo"><a href="#"><img src="{{ asset('img/logo.png') }}" alt="logo"></a></div>
+        <div class="logo"><a href="{{ url('/') }}"><img src="{{ asset('img/logo.png') }}" alt="logo"></a></div>
         <nav>
             <a href="#" class="pull"></a>
             <a href="#" class="pull_m"></a>

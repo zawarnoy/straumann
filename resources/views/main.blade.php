@@ -67,7 +67,7 @@
     @if (count($newsPosts))
         <section id="news">
             <div class="inner">
-                <div class="bt"><span>Новости</span></div>
+                <div class="bt"><span>Возможности лечения</span></div>
                 <ul>
                     @foreach ($newsPosts as $post)
                         <li>

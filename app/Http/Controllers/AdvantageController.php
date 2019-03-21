@@ -16,10 +16,13 @@ class AdvantageController extends Controller
             abort(404, 'Page not found');
         }
 
+        $previousId = Post::where('id', '<', $post->id)->where('category_id', '=', $category->id)->max('id');
+        $nextId     = Post::where('id', '>', $post->id)->where('category_id', '=', $category->id)->min('id');
+
         return view('article', [
-            'post' => $post,
-            'previous'  => Post::where('id', '<', $post->id)->where('category_id', '=', $category->id)->max('id'),
-            'next'      => Post::where('id', '>', $post->id)->where('category_id', '=', $category->id)->min('id'),
+            'post'      => $post,
+            'previous'  => $previousId ? url('advantages/' . $previousId) : null,
+            'next'      => $nextId ? url('advantages/' . $nextId) : null,
         ]);
     }
 }

@@ -33,10 +33,10 @@
             </div>
             <div class="nav">
                 @if ($previous)
-                    <a href="{{ url("articles/{$previous}") }}" class="prev">Предыдущая</a>
+                    <a href="{{ is_string($previous) ? $previous : url("articles/{$previous}") }}" class="prev">Предыдущая</a>
                 @endif
                 @if ($next)
-                    <a href="{{ url("articles/{$next}") }}" class="next">Следующая</a>
+                    <a href="{{ is_string($next) ? $next : url("articles/{$next}") }}" class="next">Следующая</a>
                 @endif
             </div>
             <div class="actions">

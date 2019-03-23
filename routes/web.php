@@ -16,6 +16,8 @@ Route::get('/advantages/{id}', 'AdvantageController@show');
 
 Route::get('/opportunities/{id}', 'TherapyOpportunitiesController@show');
 
+Route::get('/news/{id}', 'NewsController@show');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

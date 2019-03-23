@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\TherapyOpportunitiesPost;
 
-class TherapyOpportunitiesController
+class TherapyOpportunitiesController extends Controller
 {
 
     public function show($id)

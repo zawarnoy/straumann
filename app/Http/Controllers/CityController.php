@@ -6,7 +6,7 @@ use App\City;
 use App\Clinic;
 use Illuminate\Http\Request;
 
-class CityController
+class CityController extends Controller
 {
     public function clinics(Request $request)
     {

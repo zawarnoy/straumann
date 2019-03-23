@@ -19,7 +19,7 @@
 
     <section id="content">
 
-        @if ($post->image)
+        @if (!empty($post->show_image) && $post->image)
             <div class="thumbnail">
                 <img src="{{ \TCG\Voyager\Facades\Voyager::image($post->image) }}" alt="content">
             </div>

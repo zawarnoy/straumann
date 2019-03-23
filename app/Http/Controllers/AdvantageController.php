@@ -2,22 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Advantage;
 use App\Post;
-use TCG\Voyager\Models\Category;
 
 class AdvantageController extends Controller
 {
     public function show($id)
     {
-        $post = Post::findOrFail($id);
-        $category = Category::where('slug', '=', 'advantages-posts')->first();
+        $post = Advantage::findOrFail($id);
 
-        if ($post->category_id !== $category->id) {
-            abort(404, 'Page not found');
-        }
-
-        $previousId = Post::where('id', '<', $post->id)->where('category_id', '=', $category->id)->max('id');
-        $nextId     = Post::where('id', '>', $post->id)->where('category_id', '=', $category->id)->min('id');
+        $previousId = Post::where('id', '<', $post->id)->max('id');
+        $nextId     = Post::where('id', '>', $post->id)->min('id');
 
         return view('article', [
             'post'      => $post,

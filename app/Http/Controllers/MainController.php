@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Advantage;
 use App\Post;
 use TCG\Voyager\Models\Category;
 
@@ -16,7 +17,7 @@ class MainController extends Controller
 
         $params = [
             'sliderPosts'     => Post::where('category_id', '=', $sliderCategory->id)->orderBy('created_at')->get(),
-            'advantagesPosts' => Post::where('category_id', '=', $advantagesCategory->id)->orderBy('created_at')->get(),
+            'advantagesPosts' => Advantage::limit(6)->get(),
             'newsPosts'       => Post::where('category_id', '=', $newsCategory->id)->orderBy('created_at')->get(),
         ];
 

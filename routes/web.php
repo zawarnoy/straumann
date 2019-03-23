@@ -14,6 +14,8 @@ Route::get('/cities/clinics', 'CityController@clinics');
 
 Route::get('/advantages/{id}', 'AdvantageController@show');
 
+Route::get('/opportunities/{id}', 'TherapyOpportunitiesController@show');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

@@ -54,12 +54,10 @@ class ArticleController extends Controller
             abort(404, 'Page not found');
         }
 
-        $post->image = null;
-
         $params = [
             'post'      => $post,
-            'previous'  => Post::where('id', '<', $post->id)->where('category_id', '=', $category->id)->max('id'),
-            'next'      => Post::where('id', '>', $post->id)->where('category_id', '=', $category->id)->min('id'),
+            'previous'  => url('articles/' . Post::where('id', '<', $post->id)->max('id')),
+            'next'      => url('articles/' . Post::where('id', '>', $post->id)->min('id')),
         ];
 
         return view('article', $params);

@@ -28,7 +28,7 @@ $(document).ready(function () {
     $('.i_phone').mask('+7 (999) 999-99-99');
 
 
-    $("nav .pull").on('click', function (e) {
+    $("nav .menu-bar").on('click', function (e) {
         e.preventDefault();
         if ($(this).hasClass('act')) {
             $(this).removeClass('act');
@@ -40,20 +40,19 @@ $(document).ready(function () {
         $("nav ul").toggle("slide", {direction: "right"}, 400);
     });
 
-
-    $("nav .pull_m").on('click', function (e) {
-        e.preventDefault();
-        $(this).hide();
-        $('body').removeClass('mo');
-        if ($(this).hasClass('act')) {
-            $(this).removeClass('act');
-            $('body,html').removeClass('hs');
-        } else {
-            $(this).addClass('act');
-            $('body,html').addClass('hs');
-        }
-        $("nav ul").toggle("slide", {direction: "right"}, 400);
-    });
+    // $("nav .pull_m").on('click', function (e) {
+    //     e.preventDefault();
+    //     $(this).hide();
+    //     $('body').removeClass('mo');
+    //     if ($(this).hasClass('act')) {
+    //         $(this).removeClass('act');
+    //         $('body,html').removeClass('hs');
+    //     } else {
+    //         $(this).addClass('act');
+    //         $('body,html').addClass('hs');
+    //     }
+    //     $("nav ul").toggle("slide", {direction: "right"}, 400);
+    // });
 
 
     $("#contacts .filters li").on('click', function (e) {

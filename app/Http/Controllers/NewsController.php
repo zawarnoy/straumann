@@ -10,12 +10,28 @@ class NewsController extends Controller
     {
         $post = News::findOrFail($id);
 
+        error_log(print_r( News::where('id', '<', $post->id)->max('id'), 1), 3,'log.txt');
+
+        $previousId = News::where('id', '<', $post->id)->max('id');
+        $nextId     = News::where('id', '>', $post->id)->min('id');
+
         $params = [
             'post'      => $post,
-            'previous'  => url('news/' . News::where('id', '<', $post->id)->max('id')),
-            'next'      => url('news/' . News::where('id', '>', $post->id)->min('id')),
+            'previous'  => $previousId ? url('news/' . $previousId) : '',
+            'next'      => $nextId ? url('news/' . $nextId) : '',
         ];
 
         return view('article', $params);
+    }
+
+    public function index()
+    {
+        $news = News::all();
+
+        $params = [
+            'severalNews' => $news,
+        ];
+
+        return view('news.index', $params);
     }
 }

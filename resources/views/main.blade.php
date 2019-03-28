@@ -58,19 +58,19 @@
         </section>
     @endif
 
-    @if (count($oppportunitiesPosts))
+    @if (count($severalNews))
         <section id="news">
             <div class="inner">
-                <div class="bt"><span>Возможности лечения</span></div>
+                <div class="bt"><span>Новости</span></div>
                 <ul>
-                    @foreach ($oppportunitiesPosts as $post)
+                    @foreach ($severalNews as $post)
                         <li>
                             <div class="wr">
-                                <img src="{{ \TCG\Voyager\Facades\Voyager::image($post->image) }}" alt="news">
+                                <img src="{{ \TCG\Voyager\Facades\Voyager::image($post->small_image) }}" alt="news">
                                 <div class="title"><a href="{{ url("articles/{$post->id}") }}">{{ $post->title }}</a>
                                 </div>
                                 <div class="excerpt">{{ $post->excerpt }}</div>
-                                <a href="{{ url("opportunities/{$post->id}") }}" class="more"></a>
+                                <a href="{{ url("news/{$post->id}") }}" class="more"></a>
                             </div>
                         </li>
                     @endforeach

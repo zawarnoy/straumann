@@ -18,6 +18,10 @@ Route::get('/opportunities/{id}', 'TherapyOpportunitiesController@show');
 
 Route::get('/news/{id}', 'NewsController@show');
 
+//Route::get('/news', 'NewsController@index');
+
+Route::get('/opportunities', 'TherapyOpportunitiesController@index');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

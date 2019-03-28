@@ -18,7 +18,6 @@
     </section>
 
     <section id="content">
-
         @if (!empty($post->show_image) && $post->image)
             <div class="thumbnail">
                 <img src="{{ \TCG\Voyager\Facades\Voyager::image($post->image) }}" alt="content">
@@ -33,10 +32,10 @@
             </div>
             <div class="nav">
                 @if ($previous)
-                    <a href="{{ url("articles/{$previous}") }}" class="prev">Предыдущая</a>
+                    <a href="{{ url($previous) }}" class="prev">Предыдущая</a>
                 @endif
                 @if ($next)
-                    <a href="{{ url("articles/{$next}") }}" class="next">Следующая</a>
+                    <a href="{{ url($next) }}" class="next">Следующая</a>
                 @endif
             </div>
             <div class="actions">

@@ -33,9 +33,21 @@
                 <div class="text">
                     <div class="title">{{ $clinic->name }}</div>
                     <span> {{ $clinic->description }}</span>
-                    <p class="email">{{ $clinic->email }}</p>
-                    <p class="address">{{ $clinic->address }}</p>
-                    <p class="url"><a href="{{ $clinic->url }}" target="_blank"> {{ $clinic->url }}</a></p>
+
+                    <ul>
+                        <li>
+                            <i class="far fa-envelope" aria-hidden="true"></i>
+                            <span class="clinic-text">{{ $clinic->email }}</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="clinic-text">{{ $clinic->address }}</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                            <span class="clinic-text"><a href="{{ $clinic->url }}" target="_blank"> {{ $clinic->url }}</a></span>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="clearfix"></div>

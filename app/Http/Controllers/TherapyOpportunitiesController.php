@@ -20,4 +20,15 @@ class TherapyOpportunitiesController extends Controller
         return view('article', $params);
     }
 
+    public function index()
+    {
+        $posts =TherapyOpportunitiesPost::all();
+
+        $params = [
+            'posts' => $posts,
+        ];
+
+        return view('opportunities.index', $params);
+    }
+
 }

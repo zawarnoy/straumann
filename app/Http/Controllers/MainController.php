@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Advantage;
+use App\News;
 use App\Post;
 use App\SliderPost;
 use App\TherapyOpportunitiesPost;
@@ -18,7 +19,7 @@ class MainController extends Controller
         $params = [
             'sliderPosts'           => SliderPost::all(),
             'advantagesPosts'       => Advantage::limit(6)->get(),
-            'oppportunitiesPosts'   => TherapyOpportunitiesPost::all(),
+            'severalNews'           => News::all(),
         ];
 
         return view('main', $params);

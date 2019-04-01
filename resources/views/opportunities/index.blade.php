@@ -17,7 +17,7 @@
                     <li>
                         <div class="wr">
                             <img src="{{ \TCG\Voyager\Facades\Voyager::image($post->small_image) }}" alt="clinic">
-                            <div class="title">{{ $post->name }}</div>
+                            <div class="title">{{ $post->title }}</div>
                             <a href="{{ url("/news/{$post->id}") }}"></a>
                         </div>
                     </li>

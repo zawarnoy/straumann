@@ -3942,7 +3942,7 @@ header .callback {
 #about .image {
     float: left;
     position: relative;
-    margin-top: -115px;
+    margin-top: -20px;
 }
 
 #about .text {
@@ -4878,8 +4878,12 @@ a:focus {
 
 img {
     display: block;
+    /*max-width: 560px;*/
 }
 
+#about img {
+    max-width: 560px;
+}
 
 .btn {
     display: inline-block;
@@ -5171,7 +5175,7 @@ header .menu-bar {
 
 
     #clinics select {
-        display: block;
+        display: none;
         margin: 0 auto 30px;
     }
 
@@ -5193,6 +5197,15 @@ header .menu-bar {
     .bt {
         font-size: 20px;
         padding-bottom: 30px;
+    }
+
+    .title_promo {
+        font-size: 30px !important;
+        margin-bottom: 30px;
+    }
+
+    .text_promo {
+        display: none;
     }
 
     #page .inn i {

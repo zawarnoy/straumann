@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Advantage;
-use App\Post;
 
 class AdvantageController extends Controller
 {
@@ -11,8 +10,8 @@ class AdvantageController extends Controller
     {
         $post = Advantage::findOrFail($id);
 
-        $previousId = Post::where('id', '<', $post->id)->max('id');
-        $nextId     = Post::where('id', '>', $post->id)->min('id');
+        $previousId = Advantage::where('id', '<', $post->id)->max('id');
+        $nextId     = Advantage::where('id', '>', $post->id)->min('id');
 
         return view('article', [
             'post'      => $post,

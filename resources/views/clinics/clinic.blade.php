@@ -21,10 +21,10 @@
         <div class="inner">
             <div class="nav">
                 @if ($previous)
-                    <a href="{{ url("clinics/{$previous}") }}" class="prev">Предыдущая</a>
+                    <a href="{{ url("clinics/{$previous}") }}" class="prev">{{ $previousName }}</a>
                 @endif
                 @if ($next)
-                    <a href="{{ url("clinics/{$next}") }}" class="next">Следующая</a>
+                    <a href="{{ url("clinics/{$next}") }}" class="next">{{ $nextName }}</a>
                 @endif
                 <div class="clearfix"></div>
             </div>

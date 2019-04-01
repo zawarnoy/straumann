@@ -2,6 +2,7 @@
 
 namespace App;
 
+
 class Post extends \TCG\Voyager\Models\Post
 {
     public function save(array $options = [])

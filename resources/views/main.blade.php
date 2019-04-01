@@ -14,7 +14,7 @@
                         <div class="inn inn_promo">
                             <div class="title title_promo">{{ $post->title }}</div>
                             <p class="text_promo">{!! html_entity_decode($post->body) !!}</p>
-                            <a href="#" class="btn btn-green btn-promo">найти клинику</a>
+                            <a href="/clinics" class="btn btn-green btn-promo">найти клинику</a>
                         </div>
                     </div>
                 @endforeach
@@ -67,7 +67,7 @@
                         <li>
                             <div class="wr">
                                 <img src="{{ \TCG\Voyager\Facades\Voyager::image($post->small_image) }}" alt="news">
-                                <div class="title"><a href="{{ url("articles/{$post->id}") }}">{{ $post->title }}</a>
+                                <div class="title"><a href="{{ url("news/{$post->id}") }}">{{ $post->title }}</a>
                                 </div>
                                 <div class="excerpt">{{ $post->excerpt }}</div>
                                 <a href="{{ url("news/{$post->id}") }}" class="more"></a>

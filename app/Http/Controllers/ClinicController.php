@@ -21,10 +21,18 @@ class ClinicController extends Controller
     {
         $clinic = Clinic::findOrFail($id);
 
+        $previousId   = Clinic::where('id', '<', $clinic->id)->max('id');
+        $previousName = $previousId ? Clinic::find($previousId)->name : '';
+
+        $nextId   = Clinic::where('id', '>', $clinic->id)->min('id');
+        $nextName = $nextId ? Clinic::find($nextId)->name : '';
+
         $params = [
-            'clinic'    => $clinic,
-            'previous'  => Clinic::where('id', '<', $clinic->id)->max('id'),
-            'next'      => Clinic::where('id', '>', $clinic->id)->min('id'),
+            'clinic'       => $clinic,
+            'previous'     => $previousId,
+            'next'         => $nextId,
+            'nextName'     => $nextName,
+            'previousName' => $previousName,
         ];
 
         return view('clinics.clinic', $params);

@@ -58,19 +58,19 @@
         {!! $clinic->map  !!}
     </div>
 
-    @if (count($clinic->doctors))
+    @if (count($clinic->humans))
         <section id="specialist">
             <div class="inner">
                 <div class="bt"><span>CПЕЦИАЛИСТЫ</span></div>
 
                 <ul>
-                    @foreach ($clinic->doctors as $doctor)
+                    @foreach ($clinic->humans as $human)
                         <li>
-                            <img src="{{ \TCG\Voyager\Facades\Voyager::image($doctor->photo) }}" alt="user">
-                            <div class="title">{{ $doctor->name }}</div>
-                            <span>{{ $doctor->position }}</span>
+                            <img src="{{ \TCG\Voyager\Facades\Voyager::image($human->photo) }}" alt="user">
+                            <div class="title">{{ $human->name }}</div>
+                            <span>{{ $human->position }}</span>
                             <div class="excerpt">
-                                {{ $doctor->contact }}
+                                {{ $human->contact }}
                             </div>
                         </li>
                     @endforeach

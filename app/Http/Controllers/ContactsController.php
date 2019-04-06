@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Office;
+
 class ContactsController extends Controller
 {
 
     public function index()
     {
-        return view('contacts');
+        $params = [
+            'offices' => Office::all(),
+        ];
+
+        return view('contacts', $params);
     }
 
 }

@@ -55,14 +55,21 @@ $(document).ready(function () {
     // });
 
 
+    $("#contacts .tab").first().show();
+
+    var switchTab = function (tab) {
+        $(".tab").hide();
+        $("." + $(tab).attr('data-tab')).show();
+    };
+
+    switchTab($('.filters li.active'));
+
     $("#contacts .filters li").on('click', function (e) {
         e.preventDefault();
-        $("#contacts .filters li").removeClass('active');
+        $(this).siblings('li').removeClass('active');
         $(this).addClass('active');
-        $("#contacts .tab").hide();
-        $("#contacts .tab." + $(this).attr('data-tab')).show();
+        switchTab(this);
     });
-
 
     var nav = $('header');
 

@@ -1,13 +1,11 @@
 <?php
-namespace App;
 
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Clinic extends Model
+class Office extends Model
 {
-    protected $table = 'clinics';
-
     public function humans()
     {
         return $this->hasMany(Human::class);

@@ -3972,6 +3972,14 @@ header .callback {
     background: #fbfbfb
 }
 
+#specialist .tab{
+    display: none;
+}
+
+#specialist .tab li {
+    margin-bottom: 20px;
+}
+
 #advantages ul {
     max-width: 950px;
     width: 100%;

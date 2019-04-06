@@ -20,6 +20,11 @@ class MainController extends Controller
         return view('main', $params);
     }
 
+    public function choiceRole()
+    {
+        return view('choice');
+    }
+
     public function pricing()
     {
         return view('pricing');

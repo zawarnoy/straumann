@@ -4482,7 +4482,7 @@ header .callback {
     color: #6a6a6a;
 }
 
-#specialist li:nth-child(2) {
+#specialist li.centerTab {
     margin: 0 2%;
 }
 

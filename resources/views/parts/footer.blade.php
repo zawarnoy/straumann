@@ -1,13 +1,5 @@
 <footer>
-    <div class="inner">
-        <div class="coll center">
-            <span class="title col-xs-12">Контакты</span>
-            <span>Представители STRAUMANN в Латвии</span>
-            <span>Tел.: Клиники</span>
-            <span>Eл.п.: info@straumann.lv</span>
-        </div>
-        <div class="clearfix"></div>
-    </div>
+    {!! setting('site.footer')  !!}
 </footer>
 
 <div id="thanks" class="box__modal">

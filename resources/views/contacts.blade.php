@@ -52,8 +52,9 @@
             @foreach($offices as $office)
                 <div class="tab tab_{{ $office->id }}">
                     <ul>
+                        @php ($i = 0)
                         @foreach ($office->humans as $human)
-                            <li>
+                            <li {{ $i % 3 == 1 ? 'class=centerTab' : '' }}>
                                 <img src="{{ \TCG\Voyager\Facades\Voyager::image($human->photo) }}" alt="user">
                                 <div class="title">{{ $human->name }}</div>
                                 <span>{{ $human->position }}</span>
@@ -62,6 +63,7 @@
                                     <p>{{ $human->email }}</p>
                                 </div>
                             </li>
+                            @php ($i++)
                         @endforeach
                     </ul>
                 </div>

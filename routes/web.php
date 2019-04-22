@@ -22,6 +22,8 @@ Route::get('/pricing', 'MainController@pricing');
 
 //Route::get('/news', 'NewsController@index');
 
+Route::get('/about', 'AboutController@index')->name('about.index');
+
 Route::get('/opportunities', 'TherapyOpportunitiesController@index');
 
 Route::group(['prefix' => 'admin'], function () {

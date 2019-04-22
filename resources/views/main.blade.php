@@ -23,15 +23,15 @@
         </div>
     </section>
 
-    <section id="about" style="margin-top: 20px">
+    <section id="about">
         <div class="inner">
-            <div class="image"><img src="{{ Voyager::image(setting('site.about.section.image')['about']) }}" alt="about"></div>
+            <div class="image"><img src="{{ Voyager::image(setting('site.about.section.image')['about']) }}"
+                                    alt="about"></div>
             <div class="text">
                 <div class="bt"><span>О компании</span></div>
-                <p>Швейцарская компания Straumann является крупнейшим мировым производителем зубных имплантатов. Будучи родоначальником зубной имплантологии и имея не один патент, Straumann производит превосходные зубные имплантаты и уже более 40 лет возвращает улыбки миллионам людей по всему миру.</p>
+                {!! setting('site.about_text') !!}
 
-                <p>Компания Straumann сотрудничает более чем со 150 университетами, а надежность имплантатов подтверждена более чем 3000 научными исследованиями.</p>
-                <a href="#" class="btn btn-white btn-b">подробнее онас</a>
+                <a href="{{ route('about.index') }}" class="btn btn-white btn-b">Подробнее о нас</a>
             </div>
             <div class="clearfix"></div>
         </div>

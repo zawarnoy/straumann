@@ -19,8 +19,6 @@ $('body').swipe({
 
 $(document).ready(function () {
 
-    //$(window).on( "swipeleft", function( event ) { alert('asd'); } )
-
     $('.slider__promo').slick({arrows: false, dots: true});
 
     $('.open__modal').fancybox();
@@ -39,21 +37,6 @@ $(document).ready(function () {
         }
         $("nav ul").toggle("slide", {direction: "right"}, 400);
     });
-
-    // $("nav .pull_m").on('click', function (e) {
-    //     e.preventDefault();
-    //     $(this).hide();
-    //     $('body').removeClass('mo');
-    //     if ($(this).hasClass('act')) {
-    //         $(this).removeClass('act');
-    //         $('body,html').removeClass('hs');
-    //     } else {
-    //         $(this).addClass('act');
-    //         $('body,html').addClass('hs');
-    //     }
-    //     $("nav ul").toggle("slide", {direction: "right"}, 400);
-    // });
-
 
     $("#contacts .tab").first().show();
 
@@ -101,7 +84,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#advantages").off('click', '.inner ul li').on('click', '.inner ul li', function(e) {
+    $("#advantages").off('click', '.inner ul li').on('click', '.inner ul li', function (e) {
         e.preventDefault();
 
         let link = $(this).children('a').attr('href');
@@ -111,7 +94,6 @@ $(document).ready(function () {
         }
     });
 });
-
 
 
 // GOOGLE MAPS
@@ -188,7 +170,7 @@ function sendForm(form_id, res_div) {
     });
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     var x, i, j, selElmnt, a, b, c;
     /* Look for any elements with the class "custom-select": */
@@ -209,7 +191,7 @@ $(document).ready(function() {
             c = document.createElement("DIV");
             c.setAttribute('data-id', selElmnt.options[j].getAttribute('value'));
             c.innerHTML = selElmnt.options[j].innerHTML;
-            c.addEventListener("click", function(e) {
+            c.addEventListener("click", function (e) {
                 /* When an item is clicked, update the original select box,
                 and the selected item: */
                 var y, i, k, s, h;
@@ -232,7 +214,7 @@ $(document).ready(function() {
             b.appendChild(c);
         }
         x[i].appendChild(b);
-        a.addEventListener("click", function(e) {
+        a.addEventListener("click", function (e) {
             /* When the select box is clicked, close any other select boxes,
             and open/close the current select box: */
             e.stopPropagation();
@@ -276,7 +258,7 @@ $(document).ready(function() {
 
         $stub.fadeIn(400);
 
-        $.get('/cities/clinics', { 'id' : $(this).attr('data-id')} ,function (data) {
+        $.get('/cities/clinics', {'id': $(this).attr('data-id')}, function (data) {
             $listClinics.html(data);
             $stub.fadeOut(400);
         });
@@ -284,13 +266,13 @@ $(document).ready(function() {
     });
 
     // menu
-    (function(){
+    (function () {
         var burger = document.querySelector('.burger-container'),
             header = document.querySelector('.header');
 
 
         if (burger) {
-            burger.onclick = function() {
+            burger.onclick = function () {
                 header.classList.toggle('menu-opened');
             }
         }

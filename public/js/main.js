@@ -91,6 +91,25 @@ $(document).ready(function () {
         $.fancybox.close(true);
     });
 
+    $(".wr").on("click", function (e) {
+        e.preventDefault();
+
+        let link = $(this).children("a").attr("href");
+
+        if (link) {
+            window.open(link);
+        }
+    });
+
+    $("#advantages").off('click', '.inner ul li').on('click', '.inner ul li', function(e) {
+        e.preventDefault();
+
+        let link = $(this).children('a').attr('href');
+
+        if (link) {
+            window.open(link);
+        }
+    });
 });
 
 
@@ -263,4 +282,18 @@ $(document).ready(function() {
         });
 
     });
+
+    // menu
+    (function(){
+        var burger = document.querySelector('.burger-container'),
+            header = document.querySelector('.header');
+
+
+        if (burger) {
+            burger.onclick = function() {
+                header.classList.toggle('menu-opened');
+            }
+        }
+    }());
+
 });

@@ -12,7 +12,7 @@
                     <li>Контакты</li>
                 </ul>
             </div>
-            <div class="bt"><span>Контакты клиники</span></div>
+            <div class="bt"><span>Контакты</span></div>
             <div class="clearfix"></div>
         </div>
     </section>

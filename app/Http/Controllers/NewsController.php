@@ -10,8 +10,6 @@ class NewsController extends Controller
     {
         $post = News::findOrFail($id);
 
-        error_log(print_r( News::where('id', '<', $post->id)->max('id'), 1), 3,'log.txt');
-
         $previousId = News::where('id', '<', $post->id)->max('id');
         $nextId     = News::where('id', '>', $post->id)->min('id');
 

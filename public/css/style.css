@@ -5033,28 +5033,27 @@ header .menu-bar {
         right: 0;
         height: 100%;
         background: #fff;
-        width: 300px;
+        width: 100%;
         border-top: 1px solid #eee;
         z-index: 2000;
         box-sizing: border-box;
-        padding-top: 160px;
+        padding: 160px 25% 0 25%;
     }
 
     header nav ul li {
         float: none;
         margin: 0;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
     }
 
     header nav ul li a {
         display: block;
-        padding: 10px 15px;
+        padding: 20px 15px;
         background: #fff;
         border-bottom: 1px solid #eee;
         font-size: 15px;
-    }
-
-    header nav ul li:first-child {
-        border-top: 1px solid #eee
     }
 
     header .callback {
@@ -5372,10 +5371,14 @@ body {
         top: 45px;
     }
 
-    header nav ul {
-        padding-top: 100px;
-        border-left: 1px solid #eee;
-        width: 230px;
+    /*header nav ul {*/
+        /*padding-top: 100px;*/
+        /*border-left: 1px solid #eee;*/
+        /*width: 230px;*/
+    /*}*/
+
+    header nav ul li a {
+        padding: 10px 15px;
     }
 
     footer .coll {
@@ -5496,6 +5499,7 @@ body {
     width: 56px;
     right: 20px;
     bottom: 20px;
+    z-index: 10;
 }
 
 .fab:hover .fab-buttons {

@@ -1,7 +1,6 @@
 <div class="logo"><a href="{{ url('/') }}"><img src="{{ asset('img/site_logo.svg') }}" alt="logo"></a></div>
 <nav>
     <i class="fa fa-bars menu-bar" aria-hidden="true"></i>
-
     <ul>
         <i class="fa fa-times close-menu" aria-hidden="true"></i>
         {!!  menu('frontend') !!}

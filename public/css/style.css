@@ -3885,6 +3885,14 @@ header nav li a:hover:before {
     transition: width .3s ease-in-out;
 }
 
+nav .close-menu {
+    position: absolute;
+    z-index: 2001;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+}
+
 header .callback {
     float: right;
     position: relative;

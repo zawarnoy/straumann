@@ -38,6 +38,12 @@ $(document).ready(function () {
         $("nav ul").toggle("slide", {direction: "right"}, 400);
     });
 
+    $("nav .close-menu").on('click', function (e) {
+        e.preventDefault();
+
+        $("nav ul").toggle("slide", {direction: "right"}, 400);
+    });
+
     $("#contacts .tab").first().show();
 
     var switchTab = function (tab) {

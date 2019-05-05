@@ -26,9 +26,20 @@ class CategoriesController extends Controller
             throw new NotFoundHttpException();
         }
 
-        return view('category.show', [
-            'category' => $category,
-        ]);
+        $previousId = \App\Category::where('id', '<', $category->id)->max('id');
+
+        $previous = \App\Category::find($previousId);
+
+        $nextId = \App\Category::where('id', '>', $category->id)->min('id');
+        $next = \App\Category::find($nextId);
+
+        $params = [
+            'category'  => $category,
+            'previous'  => $previousId ? url('categories/' . $previous->slug) : '',
+            'next'      => $nextId ? url('categories/' . $next->slug) : '',
+        ];
+
+        return view('categories.show', $params);
     }
 
 }

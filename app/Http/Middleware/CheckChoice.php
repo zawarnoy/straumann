@@ -15,10 +15,9 @@ class CheckChoice
      */
     public function handle($request, Closure $next)
     {
-        if (strpos($request->route()->getName(), 'admin.') !== false) {
+        if (strpos($request->route()->getPrefix(), 'admin') !== false) {
             return $next($request);
         }
-
 
         if (empty($roleCookie = $request->cookie('role')) && !$request->route()->named('role.choice')) {
             return redirect()->route('role.choice');

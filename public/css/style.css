@@ -240,7 +240,6 @@ body.fancybox-iosfix {
 }
 
 .choice-headline {
-    margin-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -393,6 +392,14 @@ body.fancybox-iosfix {
     padding: 0;
     border: 0;
     height: 100%
+}
+
+#role-page {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translate(0, -50%)
 }
 
 .fancybox-error, .fancybox-iframe {
@@ -931,6 +938,11 @@ li.fancybox-thumbs-loading {
 @media (max-width: 800px) {
     .fancybox-thumbs {
         width: 110px
+    }
+
+    #role-page {
+        position: relative;
+        transform: translate(0%, 0%);
     }
 
     .role-block {
@@ -3843,10 +3855,10 @@ body {
 }
 
 .content {
-    min-height: calc(100vh - 177px);
+    position: relative;
+    min-height: calc(100vh - 147px);
 }
 
-/*.hs{overflow: hidden!important;}*/
 
 .inner {
     width: 1140px;

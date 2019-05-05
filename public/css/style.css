@@ -243,6 +243,32 @@ body.fancybox-iosfix {
     margin-bottom: 30px;
 }
 
+.choice-button {
+    font-size: 30px;
+    color: white;
+    padding: 20px 30px;
+    background: #84aa22;
+    text-transform: uppercase;
+    opacity: 0.8;
+    position: relative;
+}
+
+.patient-block .choice-button {
+    top: 35%;
+}
+
+.doctor-block .choice-button {
+    top: 45%;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
 .fancybox-is-sliding .fancybox-slide, .fancybox-slide--current, .fancybox-slide--next, .fancybox-slide--previous {
     display: block
 }

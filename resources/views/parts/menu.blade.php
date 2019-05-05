@@ -2,7 +2,7 @@
 <nav>
     <i class="fa fa-bars menu-bar" aria-hidden="true"></i>
     <ul>
-        <i class="fa fa-times close-menu" aria-hidden="true"></i>
+        <i class="fa fa-times close-menu hidden" aria-hidden="true"></i>
         {!!  menu('frontend') !!}
         {{--@foreach(menu('frontend', '_json') as $item)--}}
             {{--@php(error_log(print_r(get_object_vars($item), 1), 3,'log.txt'))--}}

@@ -10,6 +10,7 @@ $('body').swipe({
             if ($(window).width() < 1180) {
                 if (direction == 'left' || direction == 'right') {
                     $("nav ul").toggle("slide", {direction: "right"}, 400);
+                    $("nav .close-menu").toggleClass("hidden");
                     if ($('body').hasClass('mo')) $('body').removeClass('mo'); else $('body').addClass('mo');
                 }
             }
@@ -35,12 +36,14 @@ $(document).ready(function () {
             $(this).addClass('act');
             $('body,html').addClass('hs');
         }
+        $("nav .close-menu").toggleClass("hidden");
         $("nav ul").toggle("slide", {direction: "right"}, 400);
     });
 
     $("nav .close-menu").on('click', function (e) {
         e.preventDefault();
 
+        $("nav .close-menu").toggleClass("hidden");
         $("nav ul").toggle("slide", {direction: "right"}, 400);
     });
 
@@ -99,8 +102,26 @@ $(document).ready(function () {
             window.open(link);
         }
     });
+
+    $('.role-block').off('click').on('click', function (event) {
+
+        event.preventDefault();
+
+        let $this = $(this),
+            roleCookieString = $this.hasClass('patient-block') ? 'patient' : 'doctor';
+
+        setCookie('role', roleCookieString, 1);
+        location.reload(true);
+    });
+
 });
 
+function setCookie(cname, cvalue, expiredDays) {
+    let d = new Date();
+    d.setTime(d.getTime() + (expiredDays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
 
 // GOOGLE MAPS
 //

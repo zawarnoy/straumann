@@ -16,7 +16,9 @@
     <div class="stub"></div>
     @include('parts.header')
 
-    @yield('content')
+    <div class="content">
+        @yield('content')
+    </div>
 
     @include('parts.footer')
 

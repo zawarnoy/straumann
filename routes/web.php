@@ -1,6 +1,6 @@
 <?php
 
-Route::get('/', 'MainController@index');
+Route::get('/', 'MainController@index')->name('main.index');
 
 Route::get('/clinics', 'ClinicController@index');
 
@@ -25,6 +25,8 @@ Route::get('/pricing', 'MainController@pricing');
 Route::get('/about', 'AboutController@index')->name('about.index');
 
 Route::get('/opportunities', 'TherapyOpportunitiesController@index');
+
+Route::get('/choice', 'MainController@choiceRole')->name('role.choice');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

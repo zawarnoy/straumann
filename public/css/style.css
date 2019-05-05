@@ -9,6 +9,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 }
 
 body {
+    font-family: Arial, sans-serif;
     line-height: 1
 }
 
@@ -229,6 +230,20 @@ body.fancybox-iosfix {
     width: 0
 }
 
+.text-center {
+    text-align: center;
+}
+
+.title-text {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.choice-headline {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 .fancybox-is-sliding .fancybox-slide, .fancybox-slide--current, .fancybox-slide--next, .fancybox-slide--previous {
     display: block
 }
@@ -239,6 +254,34 @@ body.fancybox-iosfix {
 
 .fancybox-slide--image:before {
     display: none
+}
+
+.role-block {
+    width: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    padding: 5px 5px 5px 5px;
+    transition: all 0.4s ease;
+}
+
+.role-block-image {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.role-block:hover {
+    opacity: 0.55;
+    cursor: pointer;
+}
+
+.choice-role {
+    display: flex;
+    flex-direction: row;
 }
 
 .fancybox-slide--video .fancybox-content, .fancybox-slide--video iframe {
@@ -888,6 +931,19 @@ li.fancybox-thumbs-loading {
 @media (max-width: 800px) {
     .fancybox-thumbs {
         width: 110px
+    }
+
+    .role-block {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .role-block-image {
+        width: calc(100% - 10px);
+    }
+
+    .choice-role {
+        display: block;
     }
 
     .fancybox-show-thumbs .fancybox-inner {
@@ -3780,9 +3836,14 @@ html {
 }
 
 body {
+    padding-top: 85px;
     margin: 0px;
-    min-height: 100%;
+    min-height: calc(100vh - 85px);
     width: 100%;
+}
+
+.content {
+    min-height: calc(100vh - 177px);
 }
 
 /*.hs{overflow: hidden!important;}*/
@@ -3813,7 +3874,7 @@ header .logo {
     float: left;
 }
 
-header .logo a img{
+header .logo a img {
     height: 44px;
     margin-top: 12px;
 }
@@ -3883,6 +3944,10 @@ header nav li a:hover:after {
 header nav li a:hover:before {
     width: 50%;
     transition: width .3s ease-in-out;
+}
+
+.hidden {
+    display: none !important;
 }
 
 nav .close-menu {
@@ -3980,7 +4045,7 @@ header .callback {
     background: #fbfbfb
 }
 
-#specialist .tab{
+#specialist .tab {
     display: none;
 }
 
@@ -4138,7 +4203,7 @@ header .callback {
 
 
 #page__title {
-    padding: 160px 0 0;
+    /*padding: 160px 0 0;*/
 }
 
 .clinic-text {
@@ -4516,8 +4581,8 @@ header .callback {
     height: 540px;
 }
 
-
 footer {
+    min-height: 22px;
     padding: 20px 0;
     color: #fff;
     background: #84aa22;
@@ -5090,12 +5155,11 @@ header .menu-bar {
     }
 }
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1200px) {
     header .menu-bar {
         display: none;
     }
 }
-
 
 
 @media screen and (max-width: 1200px) {
@@ -5328,13 +5392,10 @@ header .menu-bar {
     }
 }
 
-body {
-    padding-top: 85px;
-}
-
 @media screen and (max-width: 559px) {
 
     body {
+        min-height: calc(100% - 60px);
         padding-top: 60px;
     }
 
@@ -5380,11 +5441,10 @@ body {
     }
 
     /*header nav ul {*/
-        /*padding-top: 100px;*/
-        /*border-left: 1px solid #eee;*/
-        /*width: 230px;*/
+    /*padding-top: 100px;*/
+    /*border-left: 1px solid #eee;*/
+    /*width: 230px;*/
     /*}*/
-
     header nav ul li a {
         padding: 10px 15px;
     }
@@ -5412,14 +5472,14 @@ body {
     }
 
     #page__title {
-        padding: 120px 0 0;
+        /*padding: 120px 0 0;*/
     }
 }
 
 
 @media screen and (max-width: 525px) {
     #page__title {
-        padding: 120px 0 0;
+        /*padding: 120px 0 0;*/
     }
 }
 
@@ -5496,10 +5556,6 @@ body {
     height: 100%;
     display: none;
     z-index: 9999;
-}
-
-body {
-    font-family: Arial, sans-serif;
 }
 
 .fab {

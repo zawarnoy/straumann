@@ -11,10 +11,22 @@ class MainController extends Controller
 
     public function index()
     {
+        $role = request()->cookie('role');
+
+        $sliderPosts = SliderPost::where('role', '=', $role);
+        $advantagesPosts = Advantage::where('role', '=', $role);
+        $severalNews = News::where('role', '=', $role);
+
+        if ($role == 'patient') {
+            $sliderPosts = $sliderPosts->orWhereNull('role');
+            $advantagesPosts = $advantagesPosts->orWhereNull('role');
+            $severalNews = $severalNews->orWhereNull('role');
+        }
+
         $params = [
-            'sliderPosts'           => SliderPost::all(),
-            'advantagesPosts'       => Advantage::all(),
-            'severalNews'           => News::all(),
+            'sliderPosts'           => $sliderPosts->get(),
+            'advantagesPosts'       => $advantagesPosts->get(),
+            'severalNews'           => $severalNews->get(),
         ];
 
         return view('main', $params);

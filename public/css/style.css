@@ -3936,7 +3936,6 @@ header nav .pull {
 header nav li {
     float: left;
     color: #6f6f6e;
-    font-size: 15px;
     margin: 0 0 0 20px;
 }
 
@@ -5164,7 +5163,7 @@ header .menu-bar {
         padding: 20px 15px;
         background: #fff;
         border-bottom: 1px solid #eee;
-        font-size: 15px;
+        font-size: 20px;
     }
 
     header .callback {

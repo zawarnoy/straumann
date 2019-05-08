@@ -114,6 +114,16 @@ $(document).ready(function () {
         location.reload(true);
     });
 
+    $('#floating-button').off('click').on('click', function (event) {
+        event.preventDefault();
+
+        let $this = $(this),
+            link  = $this.attr('data-link');
+
+        if (link) {
+            window.open(link);
+        }
+    })
 });
 
 function setCookie(cname, cvalue, expiredDays) {

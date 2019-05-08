@@ -966,6 +966,10 @@ li.fancybox-thumbs-loading {
         width: 110px
     }
 
+    #floating-button {
+        display: none !important;
+    }
+
     #role-page {
         position: relative;
         transform: translate(0%, 0%);
@@ -3865,18 +3869,15 @@ body {
     color: #000;
     min-width: 320px;
     overflow-x: hidden;
-}
-
-html {
-    margin: 0px;
-    height: 100%;
+    padding-top: 85px;
+    margin: 0;
+    min-height: calc(100vh - 85px);
     width: 100%;
 }
 
-body {
-    padding-top: 85px;
-    margin: 0px;
-    min-height: calc(100vh - 85px);
+html {
+    margin: 0;
+    height: 100%;
     width: 100%;
 }
 
@@ -3901,7 +3902,7 @@ header {
     width: 100%;
     z-index: 3;
     background: #fff;
-    padding: 12px 0 15px;
+    padding: 10px 0 15px;
 }
 
 header .inner {
@@ -4004,7 +4005,7 @@ header .callback {
 
 #promo {
     background: url("../img/bg_promo.jpg") 50% 0 no-repeat;
-    padding: 215px 0 340px;
+    padding: 215px 0 100px;
     position: relative;
 }
 
@@ -5763,4 +5764,29 @@ header .menu-bar {
 
 .meta span {
     margin-right: 5px;
+}
+
+.image-wrapper .image-description {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    display: none;
+}
+
+#floating-button {
+    position: fixed;
+    top: 135px;
+    right: 50px;
+    height: 120px;
+    width: 120px;
+    background: #84aa22;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor:pointer;
+    color: white;
 }

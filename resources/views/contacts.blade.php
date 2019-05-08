@@ -32,14 +32,18 @@
             </div>
             @foreach($offices as $office)
                 <div class="tab tab_{{$office->id}}">
-                    <div class="text">
-                        <div class="title">Реквизиты</div>
-                        {!! $office->unp  !!}
-                    </div>
-                    <div class="text">
-                        <div class="title">Контакты</div>
-                        {!! $office->contacts !!}
-                    </div>
+                    @if ($office->unp)
+                        <div class="text">
+                            <div class="title">Реквизиты</div>
+                            {!! $office->unp  !!}
+                        </div>
+                    @endif
+                    @if ($office->contacts)
+                        <div class="text">
+                            <div class="title">Контакты</div>
+                            {!! $office->contacts !!}
+                        </div>
+                    @endif
                 </div>
             @endforeach
             <div class="clearfix"></div>

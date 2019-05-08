@@ -20,9 +20,14 @@
     </section>
 
     <section id="content">
-        @if ($category->image)
-            <div class="thumbnail">
-                <img src="{{ \TCG\Voyager\Facades\Voyager::image($category->image) }}" alt="content">
+        @if ($category->page_image)
+            <div class="image-wrapper">
+                <div class="thumbnail">
+                    <img src="{{ \TCG\Voyager\Facades\Voyager::image($category->page_image) }}" alt="content">
+                </div>
+                @if ($category->page_image_description)
+                    <div class="image-description">{{ $category->page_image_description }}</div>
+                @endif
             </div>
         @endif
 

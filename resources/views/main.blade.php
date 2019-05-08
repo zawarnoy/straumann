@@ -82,4 +82,7 @@
             </div>
         </section>
     @endif
+
+    @include('parts.floating_button')
+
 @stop

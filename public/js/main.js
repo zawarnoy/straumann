@@ -124,6 +124,13 @@ $(document).ready(function () {
             window.open(link);
         }
     })
+
+    $('.choice-role-icon').off('click').on('click', function (event) {
+        event.preventDefault();
+
+        deleteCookie('role');
+        document.location.reload();
+    })
 });
 
 function setCookie(cname, cvalue, expiredDays) {
@@ -131,6 +138,12 @@ function setCookie(cname, cvalue, expiredDays) {
     d.setTime(d.getTime() + (expiredDays*24*60*60*1000));
     let expires = "expires="+ d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function deleteCookie(name) {
+    setCookie(name, "", {
+        expires: -1
+    })
 }
 
 // GOOGLE MAPS

@@ -1,13 +1,18 @@
 <div class="logo"><a href="{{ url('/') }}"><img src="{{ asset('img/site_logo.svg') }}" alt="logo"></a></div>
-<nav>
-    <i class="fa fa-bars menu-bar" aria-hidden="true"></i>
-    <ul>
-        <i class="fa fa-times close-menu hidden" aria-hidden="true"></i>
-        {!!  menu('frontend') !!}
-        {{--@foreach(menu('frontend', '_json') as $item)--}}
+@if ((Route::currentRouteName() !== 'role.choice'))
+    <nav>
+        <i class="fa fa-bars menu-bar" aria-hidden="true"></i>
+        <ul>
+            <i class="fa fa-times close-menu hidden" aria-hidden="true"></i>
+
+            <i class="fas fa-arrow-right choice-role-icon" title="Сменить роль"></i>
+
+            {!!  menu('frontend') !!}
+            {{--@foreach(menu('frontend', '_json') as $item)--}}
             {{--@php(error_log(print_r(get_object_vars($item), 1), 3,'log.txt'))--}}
             {{--<li><a href="{{ $item->link() }}" class="{{ $item->on() ? 'active' : '' }}">{{ $item->title }}</a></li>--}}
-        {{--@endforeach--}}
+            {{--@endforeach--}}
 
-    </ul>
-</nav>
+        </ul>
+    </nav>
+@endif

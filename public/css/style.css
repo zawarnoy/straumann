@@ -3869,7 +3869,7 @@ body {
     color: #000;
     min-width: 320px;
     overflow-x: hidden;
-    padding-top: 85px;
+    padding-top: 83px;
     margin: 0;
     min-height: calc(100vh - 85px);
     width: 100%;
@@ -3883,7 +3883,7 @@ html {
 
 .content {
     position: relative;
-    min-height: calc(100vh - 147px);
+    min-height: calc(100vh - 145px);
 }
 
 
@@ -3903,6 +3903,7 @@ header {
     z-index: 3;
     background: #fff;
     padding: 10px 0 15px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .16);
 }
 
 header .inner {
@@ -4000,12 +4001,13 @@ header .callback {
     float: right;
     position: relative;
     top: 4px;
+    margin-right: 40px;
 }
 
 
 #promo {
     background: url("../img/bg_promo.jpg") 50% 0 no-repeat;
-    padding: 215px 0 100px;
+    padding: 150px 0 100px;
     position: relative;
 }
 
@@ -5096,7 +5098,7 @@ input, textarea, select, button {
     }
 
     header nav li a {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     #promo .inn .title {
@@ -5190,6 +5192,20 @@ header .menu-bar {
 
     body.mo header nav .pull_m {
         display: block !important;
+    }
+
+    .choice-role-icon {
+        z-index: 2001;
+        position: absolute;
+        left: 20px !important;
+        top: 20px !important;
+    }
+
+    .choice-role-icon:after {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        /*font-size: 0.8em;*/
+        content: " Сменить роль";
     }
 }
 
@@ -5789,4 +5805,12 @@ header .menu-bar {
     display: flex;
     cursor:pointer;
     color: white;
+}
+
+.choice-role-icon {
+    position: absolute;
+    font-size: 2em;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
 }

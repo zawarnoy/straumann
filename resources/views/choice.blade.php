@@ -23,7 +23,6 @@
                     <div class="choice-button float-left">Я стоматолог</div>
                 </div>
             </div>
-
         </div>
     </div>
 @endsection

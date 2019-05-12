@@ -4,20 +4,20 @@
 
 @section('content')
 
-    <section id="page__title">
-        <div class="inner">
-            <div class="breadcrumbs">
-                <ul>
-                    <li><a href="#">Главная - </a></li>
-                    <li><a href="{{route('categories.index')}}">Категории - </a></li>
-                    <li><a href="{{route('categories.show', ['slug' => $category->slug])}}">{{ $category->name }}</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="bt"><span>{{ $category->name }}</span></div>
-            <div class="clearfix"></div>
-        </div>
-    </section>
+{{--    <section id="page__title">--}}
+{{--        <div class="inner">--}}
+{{--            <div class="breadcrumbs">--}}
+{{--                <ul>--}}
+{{--                    <li><a href="#">Главная - </a></li>--}}
+{{--                    <li><a href="{{route('categories.index')}}">Категории - </a></li>--}}
+{{--                    <li><a href="{{route('categories.show', ['slug' => $category->slug])}}">{{ $category->name }}</a>--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
+{{--            </div>--}}
+{{--            <div class="bt"><span></span></div>--}}
+{{--            <div class="clearfix"></div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
     <section id="content">
         @if ($category->page_image)
@@ -34,7 +34,7 @@
         <div class="inner">
 
             <div class="bt">
-                <span>Документы</span>
+                <span>{{ $category->name }}</span>
             </div>
 
             <div class="documents-list">

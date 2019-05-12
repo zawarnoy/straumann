@@ -29,7 +29,9 @@
                 <div class="clearfix"></div>
             </div>
             <div class="inn">
-                <img src="{{ \TCG\Voyager\Facades\Voyager::image($clinic->image) }}" alt="clinik">
+                <div class="clinic-image-wrapper">
+                    <img src="{{ \TCG\Voyager\Facades\Voyager::image($clinic->image) }}" alt="clinic">
+                </div>
                 <div class="text">
                     <div class="title">{{ $clinic->name }}</div>
                     <span> {{ $clinic->description }}</span>
@@ -45,7 +47,8 @@
                         </li>
                         <li>
                             <i class="fa fa-globe" aria-hidden="true"></i>
-                            <span class="clinic-text"><a href="{{ $clinic->url }}" target="_blank"> {{ $clinic->url }}</a></span>
+                            <span class="clinic-text"><a href="{{ $clinic->url }}"
+                                                         target="_blank"> {{ $clinic->url }}</a></span>
                         </li>
                     </ul>
                 </div>
@@ -54,18 +57,15 @@
         </div>
     </section>
 
-    <div class="inner">
-        {!! $clinic->map  !!}
-    </div>
-
     @if (count($clinic->humans))
         <section id="specialist">
             <div class="inner">
                 <div class="bt"><span>CПЕЦИАЛИСТЫ</span></div>
 
                 <ul>
+                    @php($i = 0)
                     @foreach ($clinic->humans as $human)
-                        <li>
+                        <li {{ $i % 3 === 1 ?  'class=centerTab' : ''}}>
                             <img src="{{ \TCG\Voyager\Facades\Voyager::image($human->photo) }}" alt="user">
                             <div class="title">{{ $human->name }}</div>
                             <span>{{ $human->position }}</span>
@@ -73,6 +73,7 @@
                                 {{ $human->contact }}
                             </div>
                         </li>
+                        @php($i++)
                     @endforeach
                 </ul>
 
@@ -80,4 +81,8 @@
             </div>
         </section>
     @endif
+
+    <div class="inner">
+        {!! $clinic->map  !!}
+    </div>
 @stop

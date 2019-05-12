@@ -12,13 +12,13 @@ Route::get('articles/{id}', 'ArticleController@show');
 
 Route::get('/cities/clinics', 'CityController@clinics');
 
-Route::get('/advantages/{id}', 'AdvantageController@show');
+Route::get('/advantages/{id}', 'AdvantageController@show')->name('advantage.show');
 
-Route::get('/opportunities/{id}', 'TherapyOpportunitiesController@show');
+Route::get('/opportunities/{id}', 'TherapyOpportunitiesController@show')->name('opportunities.show');
 
-Route::get('/news/{id}', 'NewsController@show');
+Route::get('/news/{id}', 'NewsController@show')->name('news.show');
 
-Route::get('/pricing', 'MainController@pricing');
+Route::get('/pricing', 'MainController@pricing')->name('pricing.index');
 
 //Route::get('/news', 'NewsController@index');
 

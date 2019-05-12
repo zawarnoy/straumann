@@ -4484,13 +4484,11 @@ header .callback {
 }
 
 #page .inn img {
-    float: left;
-    margin-right: 35px;
-    max-width: 50%
+
 }
 
 #page .inn .text {
-    float: left;
+    /*float: left;*/
 }
 
 #page .inn .text .title {
@@ -5002,6 +5000,10 @@ img {
     /*max-width: 560px;*/
 }
 
+.clinic-image-wrapper img {
+    width: 100%;
+}
+
 #about img {
     max-width: 560px;
 }
@@ -5323,6 +5325,18 @@ header .menu-bar {
 @media screen and (min-width: 768px) {
     footer span {
         padding-left: 10px;
+    }
+
+    .clinic-image-wrapper {
+        /*width: 50%;*/
+        float: left;
+        /*margin-right: 35px;*/
+        /*max-width: 50%*/
+    }
+
+    .clinic-image-wrapper img {
+        width: 75%;
+        height: auto;
     }
 }
 
@@ -5747,13 +5761,15 @@ header .menu-bar {
 
 .documents-list {
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 .document-area img{
     height: 100px;
     float: left;
-    width: auto;
-    margin: 0 5px 5px 0;
+    width: 100px;
+    margin: 0 20px 0 0;
 }
 
 .document-area .document-link {
@@ -5763,19 +5779,19 @@ header .menu-bar {
 }
 
 .document-area {
+    display: flex;
     min-height: 100px;
     float: none;
     position: static;
     margin-bottom: 20px;
-    max-height: 100px;
 }
 
 .document-area a:hover {
     text-decoration: underline;
 }
 
-.document-area div {
-    margin-top: 10px;
+.document-data div {
+    margin-top: 12px;
 }
 
 .meta span {
@@ -5790,6 +5806,10 @@ header .menu-bar {
 }
 
 #floating-button {
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0.8;
     position: fixed;
     top: 135px;
     right: 50px;
@@ -5805,6 +5825,10 @@ header .menu-bar {
     display: flex;
     cursor:pointer;
     color: white;
+}
+
+#floating-button:hover {
+    opacity: 1;
 }
 
 .choice-role-icon {

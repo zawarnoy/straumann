@@ -20,11 +20,11 @@ class CheckChoice
         }
 
         if (empty($roleCookie = $request->cookie('role')) && !$request->route()->named('role.choice')) {
-            return redirect()->route('role.choice');
+            return redirect()->route('role.choice', ['redirect' => $request->getRequestUri()]);
         }
 
         if ($roleCookie && $request->route()->named('role.choice')) {
-            return redirect()->route('main.index');
+            return $request->get('redirect') ? redirect($request->get('redirect')) : redirect()->route('main.index');
         }
 
         return $next($request);

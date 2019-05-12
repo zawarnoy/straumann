@@ -40,24 +40,25 @@
             <div class="documents-list">
                 @foreach($category->documents as $document)
                     <div class="document-area">
-                        <img src="{{ asset('img/document.png') }}" alt="">
+                        <img src="{{ !empty($document->image) ? \TCG\Voyager\Facades\Voyager::image($document->image) : asset('img/document.png') }}" alt="">
+                        <div class="document-data">
+                            <a class="document-link"
+                               href="/storage/{{ json_decode($document->file)[0]->download_link}}">{{ $document->name }}</a>
 
-                        <a class="document-link"
-                           href="/storage/{{ json_decode($document->file)[0]->download_link}}">{{ $document->name }}</a>
+                            <div class="document-description">
+                                {{ $document->description }}
+                            </div>
 
-                        <div class="document-description">
-                            {{ $document->description }}
-                        </div>
+                            <div class="meta">
+                                <i class="fa fa-calendar"></i>
+                                <span>{{ date('d-m-Y', strtotime($document->created_at)) }}</span>
 
-                        <div class="meta">
-                            <i class="fa fa-calendar"></i>
-                            <span>{{ date('d-m-Y', strtotime($document->created_at)) }}</span>
-
-                            <span>
+                                <span>
                             <i class="fa fa-download"></i>
                             <a class=""
                                href="/storage/{{ json_decode($document->file)[0]->download_link}}">Скачать</a>
                             </span>
+                            </div>
                         </div>
                     </div>
                 @endforeach

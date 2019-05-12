@@ -39,9 +39,11 @@
 
             <div class="documents-list">
                 @foreach($category->documents as $document)
+
                     <div class="document-area">
-                        <img src="{{ !empty($document->image) ? \TCG\Voyager\Facades\Voyager::image($document->image) : asset('img/document.png') }}" alt="">
+                        <img src="{{ !empty($document->image) ? \TCG\Voyager\Facades\Voyager::image($document->image) : asset('img/doc.ico') }}" alt="">
                         <div class="document-data">
+
                             <a class="document-link"
                                href="/storage/{{ json_decode($document->file)[0]->download_link}}">{{ $document->name }}</a>
 

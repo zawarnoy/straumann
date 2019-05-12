@@ -4243,6 +4243,7 @@ header .callback {
 
 
 #page__title {
+    padding-top: 20px;
     /*padding: 160px 0 0;*/
 }
 
@@ -5328,10 +5329,10 @@ header .menu-bar {
     }
 
     .clinic-image-wrapper {
-        /*width: 50%;*/
+        width: 50%;
         float: left;
-        /*margin-right: 35px;*/
-        /*max-width: 50%*/
+        margin-right: 35px;
+        max-width: 50%
     }
 
     .clinic-image-wrapper img {

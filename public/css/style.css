@@ -4007,7 +4007,6 @@ header .callback {
 
 #promo {
     background: url("../img/bg_promo.jpg") 50% 0 no-repeat;
-    padding: 150px 0 100px;
     position: relative;
 }
 
@@ -4755,6 +4754,7 @@ footer ul li a:hover {
     top: 0;
     left: 0;
     display: block;
+    height: 100%;
 }
 
 .slick-track:before, .slick-track:after {
@@ -4775,6 +4775,24 @@ footer ul li a:hover {
     float: left;
     height: 100%;
     min-height: 1px;
+}
+
+.promo-slide {
+    position: relative;
+    height: 100%;
+    padding: 250px 40px 150px 40px;
+    box-sizing: border-box;
+}
+
+.promo-slide__background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
 }
 
 [dir='rtl'] .slick-slide {
@@ -4874,7 +4892,7 @@ footer ul li a:hover {
 
 .slick-dots {
     position: absolute;
-    bottom: -80px;
+    bottom: 80px;
     display: block;
     width: 100%;
     padding: 0;
@@ -5216,6 +5234,10 @@ header .menu-bar {
     header .menu-bar {
         display: none;
     }
+
+    .slick-dots {
+        padding: 0 0 0 40px;
+    }
 }
 
 
@@ -5240,7 +5262,6 @@ header .menu-bar {
     #promo {
         background: url("../img/bg_promo_m.jpg") 50% 50% no-repeat;
         background-size: cover;
-        padding: 250px 0 150px;
     }
 
     #promo .ov {
@@ -5339,6 +5360,10 @@ header .menu-bar {
         width: 75%;
         height: auto;
     }
+
+    .promo-slide__background {
+        /*visibility: hidden;*/
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -5375,6 +5400,10 @@ header .menu-bar {
 
     #promo .inn p {
         font-size: 18px;
+    }
+
+    .promo-slide__background {
+        visibility: visible;
     }
 
 

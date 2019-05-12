@@ -6,15 +6,23 @@
 
     <section id="promo">
         <div class="ov"></div>
-        <div class="inner">
-            <div class="slider__promo">
+        <div>
+            <div class="slider__promo" style="display: flex; justify-content: stretch;">
 
                 @foreach ($sliderPosts as $post)
                     <div>
-                        <div class="inn inn_promo">
-                            <div class="title title_promo">{{ $post->title }}</div>
-                            <p class="text_promo">{!! html_entity_decode($post->body) !!}</p>
-                            <a href="/clinics" class="btn btn-green btn-promo">найти клинику</a>
+                        <div class="promo-slide">
+                            <div
+                                class="promo-slide__background"
+                                style="background-image: url(../img/bg_promo_m.jpg);"
+                            >
+                                <div class="ov"></div>
+                            </div>
+                            <div class="inn inn_promo">
+                                <div class="title title_promo">{{ $post->title }}</div>
+                                <p class="text_promo">{!! html_entity_decode($post->body) !!}</p>
+                                <a href="/clinics" class="btn btn-green btn-promo">найти клинику</a>
+                            </div>
                         </div>
                     </div>
                 @endforeach

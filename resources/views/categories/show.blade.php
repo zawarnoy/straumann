@@ -53,12 +53,12 @@
 
                             <div class="meta">
                                 <i class="fa fa-calendar"></i>
-                                <span>{{ date('d-m-Y', strtotime($document->created_at)) }}</span>
+                                <span> {{ date('d-m-Y', strtotime($document->created_at)) }}</span>
 
                                 <span>
                             <i class="fa fa-download"></i>
                             <a class=""
-                               href="/storage/{{ json_decode($document->file)[0]->download_link}}">Скачать</a>
+                               href="/storage/{{ json_decode($document->file)[0]->download_link}}"> Скачать</a>
                             </span>
                             </div>
                         </div>

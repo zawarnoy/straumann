@@ -4076,7 +4076,7 @@ header .callback {
 #advantages {
     background: #fbfbfb;
     padding: 120px 0 75px;
-    margin-top: -30px;
+    margin-top: 0;
     position: relative;
 }
 
@@ -4754,8 +4754,8 @@ footer ul li a:hover {
     top: 0;
     left: 0;
     display: block;
-    height: 100%;
-    /*height: calc(100vh - 85px);*/
+    /*height: 100%;*/
+    height: calc(100vh - 85px);
 }
 
 .slick-track:before, .slick-track:after {
@@ -4781,8 +4781,7 @@ footer ul li a:hover {
 .promo-slide {
     position: relative;
     height: 100%;
-    padding: 250px 40px 150px 40px;
-    /*padding: 150px 40px 150px 40px;*/
+    padding: 250px 40px 150px 60px;
     box-sizing: border-box;
 }
 
@@ -4795,6 +4794,7 @@ footer ul li a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
+    background-position: center;
 }
 
 [dir='rtl'] .slick-slide {
@@ -5232,6 +5232,20 @@ header .menu-bar {
     }
 }
 
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+    #promo .inn {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .slick-dots {
+        display: none !important;
+    }
+}
+
 @media screen and (min-width: 1200px) {
     header .menu-bar {
         display: none;
@@ -5239,6 +5253,11 @@ header .menu-bar {
 
     .slick-slide {
         height: calc(100vh - 83px);
+    }
+
+    #promo .inn {
+        position: absolute;
+        top: calc(25% - 43px);
     }
 
     .slick-dots {
@@ -5379,8 +5398,44 @@ header .menu-bar {
         padding-bottom: 30px;
     }
 
+    .slick-track {
+        height: 100%;
+    }
+
+    .promo-slide {
+        padding: 0;
+    }
+
+    #about {
+        display: none !important;
+    }
+
+    #advantages {
+        margin-top: 0;
+    }
+
+    /*.promo-slide .title-promo{*/
+    /*    font-size: 20px !important;*/
+
+    /*}*/
+
+    .slick-slider {
+        min-height: 216px;
+    }
+
+    .slick-dots {
+        display: none !important;
+    }
+
+    .inn .btn {
+        font-size: 12px;
+        width: 40%;
+        height: 50px;
+        line-height: 50px;
+    }
+
     .title_promo {
-        font-size: 30px !important;
+        font-size: 22px !important;
         margin-bottom: 30px;
     }
 

@@ -8,11 +8,11 @@ $('body').swipe({
 
         } else {
             if ($(window).width() < 1180) {
-                if (direction == 'left' || direction == 'right') {
-                    $("nav ul").toggle("slide", {direction: "right"}, 400);
-                    $("nav .close-menu").toggleClass("hidden");
-                    if ($('body').hasClass('mo')) $('body').removeClass('mo'); else $('body').addClass('mo');
-                }
+                // if (direction == 'left' || direction == 'right') {
+                //     $("nav ul").toggle("slide", {direction: "right"}, 400);
+                //     $("nav .close-menu").toggleClass("hidden");
+                //     if ($('body').hasClass('mo')) $('body').removeClass('mo'); else $('body').addClass('mo');
+                // }
             }
         }
     }
@@ -20,11 +20,22 @@ $('body').swipe({
 
 $(document).ready(function () {
 
-    $('.slider__promo').slick({arrows: false, dots: true});
+    $('.slider__promo').slick({arrows: true, dots: true});
+
+    if ($(window).width() <= '768') {
+        $('#promo .inn').css({
+            "text-align": "center",
+            "position": "absolute",
+            "top": "50%",
+            "left": "50%",
+            "margin-right": "-50%",
+            "transform": "translate(-50%, -50%)"
+        });
+    }
 
     $('.open__modal').fancybox();
 
-    $('.i_phone').mask('+7 (999) 999-99-99');
+    $('.i_phone').mask('+375 (99) 999-99-99');
 
 
     $("nav .menu-bar").on('click', function (e) {
@@ -118,7 +129,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         let $this = $(this),
-            link  = $this.attr('data-link');
+            link = $this.attr('data-link');
 
         if (link) {
             window.open(link);
@@ -135,8 +146,8 @@ $(document).ready(function () {
 
 function setCookie(cname, cvalue, expiredDays) {
     let d = new Date();
-    d.setTime(d.getTime() + (expiredDays*24*60*60*1000));
-    let expires = "expires="+ d.toUTCString();
+    d.setTime(d.getTime() + (expiredDays * 24 * 60 * 60 * 1000));
+    let expires = "expires=" + d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 

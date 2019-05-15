@@ -5,7 +5,7 @@
 @section('content')
 
     <div id="role-page">
-        <div class="text-center title-text choice-headline">
+        <div class="text-center title-text choice-headline" style="margin-top: 30px">
             <h2>Кто вы?</h2>
         </div>
 

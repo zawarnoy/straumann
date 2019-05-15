@@ -13,9 +13,8 @@
                     <div>
                         <div class="promo-slide">
                             <div
-                                class="promo-slide__background"
-{{--                                style="background-image: url(../img/bg_promo_m.jpg);">--}}
-                                style="background-image: url({{ \TCG\Voyager\Facades\Voyager::image($post->image) }});">
+                                    class="promo-slide__background"
+                                    style="background-image: url({{ \TCG\Voyager\Facades\Voyager::image($post->image) }});">
                                 <div class="ov"></div>
                             </div>
                             <div class="inn inn_promo">
@@ -46,7 +45,7 @@
     </section>
 
     @if (count($advantagesPosts))
-        <section id="advantages" style="margin-top: 20px">
+        <section id="advantages">
             <div class="inner">
 
                 <div class="bt"><span>преимущества</span></div>

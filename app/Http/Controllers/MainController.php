@@ -9,24 +9,29 @@ use App\SliderPost;
 class MainController extends Controller
 {
 
+    private $cookieChoicedRole;
+
+    public function __construct()
+    {
+        $this->cookieChoicedRole = request()->cookie('role');
+    }
+
     public function index()
     {
-        $role = request()->cookie('role');
+        $sliderPosts = SliderPost::where('role', '=', $this->cookieChoicedRole);
+        $advantagesPosts = Advantage::where('role', '=', $this->cookieChoicedRole);
+        $severalNews = News::where('role', '=', $this->cookieChoicedRole);
 
-        $sliderPosts = SliderPost::where('role', '=', $role);
-        $advantagesPosts = Advantage::where('role', '=', $role);
-        $severalNews = News::where('role', '=', $role);
-
-        if ($role == 'patient') {
+        if ($this->cookieChoicedRole == 'patient') {
             $sliderPosts = $sliderPosts->orWhereNull('role');
             $advantagesPosts = $advantagesPosts->orWhereNull('role');
             $severalNews = $severalNews->orWhereNull('role');
         }
 
         $params = [
-            'sliderPosts'           => $sliderPosts->get(),
-            'advantagesPosts'       => $advantagesPosts->get(),
-            'severalNews'           => $severalNews->get(),
+            'sliderPosts' => $sliderPosts->get(),
+            'advantagesPosts' => $advantagesPosts->get(),
+            'severalNews' => $severalNews->get(),
         ];
 
         return view('main', $params);

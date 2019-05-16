@@ -5224,12 +5224,12 @@ header .menu-bar {
         top: 20px !important;
     }
 
-    .choice-role-icon:after {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 400;
-        /*font-size: 0.8em;*/
-        content: " Сменить роль";
-    }
+    /*.choice-role-icon:after {*/
+    /*    font-family: 'Roboto', sans-serif;*/
+    /*    font-weight: 400;*/
+    /*    !*font-size: 0.8em;*!*/
+    /*    content: " Сменить роль";*/
+    /*}*/
 }
 
 @media screen and (min-width: 767px) and (max-width: 1200px) {
@@ -5249,6 +5249,10 @@ header .menu-bar {
 @media screen and (min-width: 1200px) {
     header .menu-bar {
         display: none;
+    }
+
+    .slick-arrow {
+        display: none !important;
     }
 
     .slick-slide {
@@ -5396,6 +5400,11 @@ header .menu-bar {
     .bt {
         font-size: 20px;
         padding-bottom: 30px;
+    }
+
+    .slider__promo {
+        display: flex;
+        justify-content: stretch;
     }
 
     .slick-track {
@@ -5928,5 +5937,6 @@ header .menu-bar {
     font-size: 2em;
     right: 30px;
     top: 30px;
+    max-width: 30px;
     cursor: pointer;
 }

@@ -5,7 +5,8 @@
         <ul>
             <i class="fa fa-times close-menu hidden" aria-hidden="true"></i>
 
-            <i class="fas fa-arrow-right choice-role-icon" title="Сменить роль"></i>
+
+            <i class="fas {{ request()->cookie('role') == 'patient' ? 'fa-user-md' : 'fa-user' }} choice-role-icon" title="Сменить роль"></i>
 
             {!!  menu('frontend') !!}
             {{--@foreach(menu('frontend', '_json') as $item)--}}

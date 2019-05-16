@@ -7,7 +7,7 @@
     <section id="promo">
         <div class="ov"></div>
         <div>
-            <div class="slider__promo" style="display: flex; justify-content: stretch;">
+            <div class="slider__promo" style="/*display: flex; justify-content: stretch;*/">
 
                 @foreach ($sliderPosts as $post)
                     <div>

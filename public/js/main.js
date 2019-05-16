@@ -20,6 +20,18 @@ $('body').swipe({
 
 $(document).ready(function () {
 
+    $('.slider__promo').on('lazyLoaded', function(event, slick){
+
+        let slider = $('.slick-current.slick-active');
+
+        console.log(slider.css('width'));
+
+        if ($(window).width() >= '1600') {
+            slider.css('width', $(window).width());
+        }
+
+    });
+
     $('.slider__promo').slick({arrows: true, dots: true});
 
     if ($(window).width() <= '768') {
@@ -141,7 +153,7 @@ $(document).ready(function () {
 
         deleteCookie('role');
         document.location.reload();
-    })
+    });
 });
 
 function setCookie(cname, cvalue, expiredDays) {

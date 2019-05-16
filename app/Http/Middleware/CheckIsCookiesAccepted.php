@@ -4,6 +4,7 @@
 namespace App\Http\Middleware;
 
 
+use App\Http\Service\Traits\IsAdminRoutesTrait;
 use App\Http\Service\Traits\IsChoiceRoleRouteTrait;
 use Closure;
 
@@ -11,6 +12,7 @@ class CheckIsCookiesAccepted
 {
 
     use IsChoiceRoleRouteTrait;
+    use IsAdminRoutesTrait;
 
     /**
      * Handle an incoming request.
@@ -21,9 +23,9 @@ class CheckIsCookiesAccepted
      */
     public function handle($request, Closure $next)
     {
-        if (strpos($request->route()->getPrefix(), 'admin') !== false) {
-            return $next($request);
-        }
+//        if ($this->isAdminRouteRequest()) {
+//            return $next($request);
+//        }
 
         if (empty($roleCookie = $request->cookie('role')) && !$this->isChoiceRoleRoute()) {
             return redirect()->route('role.choice', ['redirect' => $request->getRequestUri()]);

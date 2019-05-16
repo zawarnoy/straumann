@@ -20,7 +20,7 @@ $('body').swipe({
 
 $(document).ready(function () {
 
-    $('.slider__promo').on('lazyLoaded', function(event, slick){
+    $('.slider__promo').on('lazyLoaded', function (event, slick) {
 
         let slider = $('.slick-current.slick-active');
 
@@ -112,7 +112,7 @@ $(document).ready(function () {
         let link = $(this).children("a").attr("href");
 
         if (link) {
-            window.open(link);
+            document.location.href = link;
         }
     });
 
@@ -122,9 +122,11 @@ $(document).ready(function () {
         let link = $(this).children('a').attr('href');
 
         if (link) {
-            window.open(link);
+            document.location.href = link;
         }
     });
+
+    /* <p style="text-align: center;"><iframe src="https://www.youtube.com/embed/MyihO70ibsc" width="500" height="281" frameborder="0" allowfullscreen=""></iframe></p> */
 
     $('.role-block').off('click').on('click', function (event) {
 

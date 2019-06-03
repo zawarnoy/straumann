@@ -152,7 +152,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         deleteCookie('role');
-        document.location.reload();
+        document.location.href = '/choice';
     });
 });
 

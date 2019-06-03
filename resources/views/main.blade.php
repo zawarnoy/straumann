@@ -20,7 +20,8 @@
                             <div class="inn inn_promo">
                                 <div class="title title_promo">{{ $post->title }}</div>
                                 <p class="text_promo">{!! html_entity_decode($post->body) !!}</p>
-                                <a href="/clinics" class="btn btn-green btn-promo">найти клинику</a>
+                                <a href="{{ $post->button_link ? $post->button_link : '/clinics' }}"
+                                   class="btn btn-green btn-promo">{{ $post->button_text ? $post->button_text : 'найти клинику' }}</a>
                             </div>
                         </div>
                     </div>

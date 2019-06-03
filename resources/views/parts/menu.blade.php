@@ -5,7 +5,7 @@
         <ul>
             <i class="fa fa-times close-menu hidden" aria-hidden="true"></i>
             <i class="fas fa-sign-out-alt choice-role-icon" title="Сменить роль"></i>
-            {!!  menu('frontend') !!}
+            {!! request()->cookie('role') == 'patient' ? menu('frontend') : menu('frontend_doctor') !!}
         </ul>
     </nav>
 @endif

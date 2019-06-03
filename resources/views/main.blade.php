@@ -33,11 +33,14 @@
 
     <section id="about">
         <div class="inner">
-            <div class="image"><img src="{{ Voyager::image(setting('site.about.section.image')['about']) }}"
-                                    alt="about"></div>
+            <div class="image">
+                <img src="{{ $role == 'patient' ?
+                Voyager::image(setting('site.about_section_image_patient')) :
+                Voyager::image(setting('site.about.section.image')['about']) }}" alt="about">
+            </div>
             <div class="text">
                 <div class="bt"><span>О компании</span></div>
-                {!! setting('site.about_text') !!}
+                {!! $role == 'patient' ? setting('site.about_section_text_patient') : setting('site.about_text') !!}
 
                 <a href="{{ route('about.index') }}" class="btn btn-white btn-b">Подробнее о нас</a>
             </div>

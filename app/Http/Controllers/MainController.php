@@ -32,6 +32,7 @@ class MainController extends Controller
             'sliderPosts' => $sliderPosts->get(),
             'advantagesPosts' => $advantagesPosts->get(),
             'severalNews' => $severalNews->get(),
+            'role' => $this->cookieChoicedRole,
         ];
 
         return view('main', $params);

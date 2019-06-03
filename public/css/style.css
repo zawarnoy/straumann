@@ -4110,6 +4110,15 @@ header .callback {
     max-width: 295px;
     width: 100%;
     transition: all 0.5s ease-out;
+    background: no-repeat center;
+    background-size: 100% 100%;
+}
+
+#advantages li:hover {
+    background: #84aa22 no-repeat center;
+    background-size: 100% 100%;
+    color: #fff;
+    transition: all 0.5s ease-out;
 }
 
 #advantages li:nth-child(1), #advantages li:nth-child(4) {
@@ -4140,12 +4149,6 @@ header .callback {
     position: absolute;
     top: 75px;
     left: 25px;
-}
-
-#advantages li:hover {
-    background: #84aa22;
-    color: #fff;
-    transition: all 0.5s ease-out;
 }
 
 #advantages li:hover span {

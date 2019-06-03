@@ -23,9 +23,7 @@ $(document).ready(function () {
     $('.slider__promo').on('lazyLoaded', function (event, slick) {
 
         let slider = $('.slick-current.slick-active');
-
-        console.log(slider.css('width'));
-
+        
         if ($(window).width() >= '1600') {
             slider.css('width', $(window).width());
         }

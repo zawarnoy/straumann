@@ -52,7 +52,7 @@
                 <ul>
                     @php ($counter = 1)
                     @foreach($advantagesPosts as $post)
-                        <li>
+                        <li style='background-image: {{ $post->background_image ? 'url(storage/' . json_decode($post->background_image)[0]->download_link . ')' : ''}}'>
                             <span>{{ $counter }}</span>
                             <p>{{ $post->excerpt }}</p>
                             <a href="{{ url("advantages/{$post->id}") }}"><i></i></a>

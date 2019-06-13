@@ -44,6 +44,12 @@
                             {!! $office->contacts !!}
                         </div>
                     @endif
+                    @if($office->bookkeeping_contacts)
+                        <div class="text">
+                            <div class="title">Контакты бухгалтерии</div>
+                            {!! $office->bookkeeping_contacts !!}
+                        </div>
+                    @endif
                 </div>
             @endforeach
             <div class="clearfix"></div>

@@ -966,6 +966,10 @@ li.fancybox-thumbs-loading {
         width: 110px
     }
 
+    nav > ul > ul {
+        overflow-y: scroll;
+    }
+
     #floating-button {
         display: none !important;
     }

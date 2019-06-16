@@ -351,4 +351,10 @@ $(document).ready(function () {
         }
     }());
 
+    $('#accept-cookies').on('click', function (event) {
+        event.preventDefault();
+        setCookie('accept_cookies', 'accepted', 3);
+        $('.cookie-panel').hide();
+    })
+
 });

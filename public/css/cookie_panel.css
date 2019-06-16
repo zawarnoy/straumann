@@ -1,0 +1,42 @@
+.cookie-panel {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: black;
+    z-index: 10;
+    opacity: 0.9;
+    color: white;
+}
+
+.cookie-panel__content-wrapper {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+.cookie-panel .cookie-text {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.cookie-panel .btn {
+    max-width: 160px;
+    min-width: 160px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 10px;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 900px ){
+    .cookie-panel__content-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cookie-panel .btn {
+        margin-top: 10px;
+    }
+}

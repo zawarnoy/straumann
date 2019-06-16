@@ -1,0 +1,13 @@
+.category-image {
+    position: relative;
+}
+
+.category-image .image-text {
+    top: 60%;
+    position: absolute;
+    /*background: ;*/
+    font-size: 25px;
+    padding: 10px;
+    background: #070707;
+    color: #d2d2d2;
+}

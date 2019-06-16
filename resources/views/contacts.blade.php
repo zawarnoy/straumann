@@ -69,8 +69,9 @@
                                 <div class="title">{{ $human->name }}</div>
                                 <span>{{ $human->position }}</span>
                                 <div class="excerpt">
-                                    <p>{{ $human->contact }}</p>
-                                    <p>{{ $human->email }}</p>
+                                    <a href="tel:{{ $human->contact }}">{{ $human->contact }}</a>
+                                    <br>
+                                    <a href="mailto:{{ $human->email }}">{{ $human->email }}</a>
                                 </div>
                             </li>
                             @php ($i++)

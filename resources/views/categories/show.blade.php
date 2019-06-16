@@ -2,28 +2,17 @@
 
 @section('title', $category->name)
 
+@section('additional_styles')
+    <link rel="stylesheet" href="{{ asset('css/categories.css') }}">
+@endsection
+
 @section('content')
-
-{{--    <section id="page__title">--}}
-{{--        <div class="inner">--}}
-{{--            <div class="breadcrumbs">--}}
-{{--                <ul>--}}
-{{--                    <li><a href="#">Главная - </a></li>--}}
-{{--                    <li><a href="{{route('categories.index')}}">Категории - </a></li>--}}
-{{--                    <li><a href="{{route('categories.show', ['slug' => $category->slug])}}">{{ $category->name }}</a>--}}
-{{--                    </li>--}}
-{{--                </ul>--}}
-{{--            </div>--}}
-{{--            <div class="bt"><span></span></div>--}}
-{{--            <div class="clearfix"></div>--}}
-{{--        </div>--}}
-{{--    </section>--}}
-
     <section id="content">
         @if ($category->page_image)
             <div class="image-wrapper">
-                <div class="thumbnail">
+                <div class="thumbnail category-image">
                     <img src="{{ \TCG\Voyager\Facades\Voyager::image($category->page_image) }}" alt="content">
+                    <div class="image-text">Библиотека</div>
                 </div>
                 @if ($category->page_image_description)
                     <div class="image-description">{{ $category->page_image_description }}</div>
@@ -41,7 +30,8 @@
                 @foreach($category->documents as $document)
 
                     <div class="document-area">
-                        <img src="{{ !empty($document->image) ? \TCG\Voyager\Facades\Voyager::image($document->image) : asset('img/doc.ico') }}" alt="">
+                        <img src="{{ !empty($document->image) ? \TCG\Voyager\Facades\Voyager::image($document->image) : asset('img/doc.ico') }}"
+                             alt="">
                         <div class="document-data">
 
                             <a class="document-link"

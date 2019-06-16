@@ -6,12 +6,12 @@
 
     <section id="page__title">
         <div class="inner">
-{{--            <div class="breadcrumbs">--}}
-{{--                <ul>--}}
-{{--                    <li><a href="#">Главная - </a></li>--}}
-{{--                    <li>Статьи</li>--}}
-{{--                </ul>--}}
-{{--            </div>--}}
+            {{--            <div class="breadcrumbs">--}}
+            {{--                <ul>--}}
+            {{--                    <li><a href="#">Главная - </a></li>--}}
+            {{--                    <li>Статьи</li>--}}
+            {{--                </ul>--}}
+            {{--            </div>--}}
             <div class="bt"><span>{{ $clinic->name }}</span></div>
             <div class="clearfix"></div>
         </div>
@@ -34,22 +34,47 @@
                 </div>
                 <div class="text">
                     <div class="title">{{ $clinic->name }}</div>
-                    <span> {{ $clinic->description }}</span>
+                    <div class="clinic-description">{{ $clinic->description }}</div>
 
                     <ul>
-                        <li>
-                            <i class="far fa-envelope" aria-hidden="true"></i>
-                            <span class="clinic-text">{{ $clinic->email }}</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span class="clinic-text">{{ $clinic->address }}</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-globe" aria-hidden="true"></i>
-                            <span class="clinic-text"><a href="{{ $clinic->url }}"
-                                                         target="_blank"> {{ $clinic->url }}</a></span>
-                        </li>
+                        @if($clinic->email)
+                            <li>
+                                <i class="far fa-envelope" aria-hidden="true"></i>
+                                <span class="clinic-text">
+                                    <a href="mailto:{{$clinic->email}}">
+                                        {{ $clinic->email }}
+                                    </a>
+                                </span>
+                            </li>
+                        @endif
+                        @if($clinic->address)
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="clinic-text">
+                                    <a target="_blank"
+                                       href="https://www.google.com/maps/search/{{ $clinic->address }}/">
+                                    {{ $clinic->address }}
+                                    </a>
+                                </span>
+                            </li>
+                        @endif
+                        @if($clinic->url)
+                            <li>
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                                <span class="clinic-text"><a href="{{ $clinic->url }}"
+                                                             target="_blank"> {{ $clinic->url }}</a></span>
+                            </li>
+                        @endif
+                        @if($clinic->phone)
+                            <li>
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span class="clinic-text">
+                                    <a href="tel:{{$clinic->phone}}">
+                                    {{ $clinic->phone }}
+                                    </a>
+                                </span>
+                            </li>
+                        @endif
                     </ul>
                 </div>
             </div>

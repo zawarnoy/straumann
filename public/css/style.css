@@ -1444,6 +1444,10 @@ Copyright (c) 2013 Daniel Eden
     }
 }
 
+.clinic-description {
+    margin-bottom: 20px;
+}
+
 .wobble {
     -webkit-animation-name: wobble;
     animation-name: wobble

@@ -42,7 +42,7 @@
                 <div class="bt"><span>О компании</span></div>
                 {!! $role == 'patient' ? setting('site.about_section_text_patient') : setting('site.about_text') !!}
 
-                <a href="{{ route('about.index') }}" class="btn btn-white btn-b">Подробнее о нас</a>
+                <a href="{!! $role == 'patient' ? setting('site.patient_about_link') : setting('site.doctor_about_link') !!}" class="btn btn-white btn-b">Подробнее о нас</a>
             </div>
             <div class="clearfix"></div>
         </div>

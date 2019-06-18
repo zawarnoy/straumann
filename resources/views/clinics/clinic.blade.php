@@ -55,8 +55,8 @@
                         @if($clinic->url)
                             <li>
                                 <i class="fa fa-globe" aria-hidden="true"></i>
-                                <span class="clinic-text"><a href="{{ $clinic->url }}"
-                                                             target="_blank"> {{ $clinic->url }}</a></span>
+                                <span class="clinic-text"><a href="#"
+                                                             > {{ $clinic->url }}</a></span>
                             </li>
                         @endif
                         @if($clinic->phone)

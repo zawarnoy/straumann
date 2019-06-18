@@ -4005,14 +4005,6 @@ nav .close-menu {
     font-size: 2em;
 }
 
-header .callback {
-    float: right;
-    position: relative;
-    top: 4px;
-    margin-right: 40px;
-}
-
-
 #promo {
     background: url("../img/bg_promo.jpg") 50% 0 no-repeat;
     position: relative;
@@ -5232,12 +5224,7 @@ header .menu-bar {
         display: block !important;
     }
 
-    .choice-role-icon {
-        z-index: 2001;
-        position: absolute;
-        left: 20px !important;
-        top: 20px !important;
-    }
+
 
     /*.choice-role-icon:after {*/
     /*    font-family: 'Roboto', sans-serif;*/
@@ -5946,11 +5933,3 @@ header .menu-bar {
     opacity: 1;
 }
 
-.choice-role-icon {
-    position: absolute;
-    font-size: 2em;
-    right: 30px;
-    top: 30px;
-    max-width: 30px;
-    cursor: pointer;
-}

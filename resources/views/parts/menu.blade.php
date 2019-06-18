@@ -4,7 +4,11 @@
         <i class="fa fa-bars menu-bar" aria-hidden="true"></i>
         <ul>
             <i class="fa fa-times close-menu hidden" aria-hidden="true"></i>
-            <i class="fas fa-sign-out-alt choice-role-icon" title="Сменить роль"></i>
+
+            <div class="choice-role-block">
+                <span class="choice-role-text">Кто вы?</span>
+                <i class="fa fa-door-open choice-role-icon" title="Сменить роль"></i>
+            </div>
             {!! request()->cookie('role') == 'patient' ? menu('frontend') : menu('frontend_doctor') !!}
         </ul>
     </nav>

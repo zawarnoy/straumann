@@ -3,11 +3,19 @@
 }
 
 .category-image .image-text {
-    top: 60%;
+    top: 50%;
+    opacity: 0.8;
     position: absolute;
     /*background: ;*/
-    font-size: 25px;
-    padding: 10px;
+    font-size: 80px;
+    padding: 45px;
     background: #070707;
     color: #d2d2d2;
+}
+
+@media screen and (max-width: 900px ){
+    .category-image .image-text {
+        padding: 10px;
+        font-size: 25px;
+    }
 }

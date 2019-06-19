@@ -4120,9 +4120,9 @@ nav .close-menu {
     transition: all 0.5s ease-out;
 }
 
-#advantages li:nth-child(1), #advantages li:nth-child(4) {
-    max-width: 360px;
-}
+/*#advantages li:nth-child(1), #advantages li:nth-child(4) {*/
+/*    max-width: 360px;*/
+/*}*/
 
 #advantages li p {
     text-transform: uppercase;
@@ -5939,6 +5939,7 @@ header .menu-bar {
     height: 120px;
     width: 120px;
     background: #84aa22;
+    line-height: 18px;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;

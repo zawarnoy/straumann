@@ -8,6 +8,7 @@
 
 .choice-role-text {
     font-size: 1.7em;
+    display: none!important;
 }
 
 .choice-role-icon {
@@ -49,8 +50,11 @@ header .callback {
         left: 20px !important;
         top: 20px !important;
     }
+}
 
-    header .callback {
-        margin-right: 40px;
-    }
+header .callback {
+    float: right;
+    position: relative;
+    top: 4px;
+    margin-right: 40px;
 }

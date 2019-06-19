@@ -23,7 +23,7 @@ $(document).ready(function () {
     $('.slider__promo').on('lazyLoaded', function (event, slick) {
 
         let slider = $('.slick-current.slick-active');
-        
+
         if ($(window).width() >= '1600') {
             slider.css('width', $(window).width());
         }
@@ -43,7 +43,12 @@ $(document).ready(function () {
         });
     }
 
-    $('.open__modal').fancybox();
+    $('.open__modal').fancybox({
+            helpers: {
+                css: {'background-color' : ''}
+            }
+        }
+    );
 
     $('.i_phone').mask('+375 (99) 999-99-99');
 
@@ -148,7 +153,7 @@ $(document).ready(function () {
         }
     })
 
-    $('.choice-role-icon').off('click').on('click', function (event) {
+    $('.choice-role-block').off('click').on('click', function (event) {
         event.preventDefault();
 
         deleteCookie('role');
@@ -355,6 +360,10 @@ $(document).ready(function () {
         event.preventDefault();
         setCookie('accept_cookies', 'accepted', 3);
         $('.cookie-panel').hide();
-    })
+    });
+
+    setInterval(function () {
+        $('.slick-next').trigger('click');
+    }, 5000);
 
 });

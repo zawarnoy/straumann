@@ -4519,6 +4519,10 @@ nav .close-menu {
     color: #000;
 }
 
+.clinic-text a:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
 
 #contacts {
     padding: 40px 0;
@@ -4601,6 +4605,12 @@ nav .close-menu {
 
 #specialist li img {
     width: 100%;
+}
+
+#specialist li img:hover, #specialist li .title:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=100);
+    cursor: default;
 }
 
 #specialist li .title {
@@ -4995,9 +5005,8 @@ footer ul li a:hover {
 }
 
 .fancybox-bg {
-    background: #84aa22;
+    /*background: #84aa22;*/
 }
-
 
 .clearfix {
     clear: both;
@@ -5032,8 +5041,19 @@ img {
     width: 100%;
 }
 
+.clinic-image-wrapper img:hover {
+    -moz-box-shadow: 0 0 10px #464646;
+    -webkit-box-shadow: 0 0 10px #464646;
+    box-shadow: 0 0 10px #464646;
+}
+
 #about img {
     max-width: 560px;
+}
+
+#about img:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
 }
 
 .btn {
@@ -5385,7 +5405,8 @@ header .menu-bar {
         width: 50%;
         float: left;
         margin-right: 35px;
-        max-width: 50%
+        max-width: 50%;
+        border-right: 1px solid #84aa22;
     }
 
     .clinic-image-wrapper img {
@@ -5728,7 +5749,7 @@ header .menu-bar {
     position: fixed;
     width: 56px;
     right: 20px;
-    bottom: 20px;
+    bottom: 70px;
     z-index: 10;
 }
 

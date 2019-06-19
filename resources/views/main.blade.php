@@ -34,15 +34,18 @@
     <section id="about">
         <div class="inner">
             <div class="image">
-                <img src="{{ $role == 'patient' ?
+                <a target="_blank" href="{!! $role == 'patient' ? setting('site.patient_about_link') : setting('site.doctor_about_link') !!}">
+                    <img src="{{ $role == 'patient' ?
                 Voyager::image(setting('site.about_section_image_patient')) :
                 Voyager::image(setting('site.about.section.image')['about']) }}" alt="about">
+                </a>
             </div>
             <div class="text">
                 <div class="bt"><span>О компании</span></div>
                 {!! $role == 'patient' ? setting('site.about_section_text_patient') : setting('site.about_text') !!}
 
-                <a href="{!! $role == 'patient' ? setting('site.patient_about_link') : setting('site.doctor_about_link') !!}" class="btn btn-white btn-b">Подробнее о нас</a>
+                <a target="_blank" href="{!! $role == 'patient' ? setting('site.patient_about_link') : setting('site.doctor_about_link') !!}"
+                   class="btn btn-white btn-b">Подробнее о нас</a>
             </div>
             <div class="clearfix"></div>
         </div>

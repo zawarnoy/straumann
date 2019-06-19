@@ -24,7 +24,9 @@
             </div>
             <div class="inn">
                 <div class="clinic-image-wrapper">
-                    <img src="{{ \TCG\Voyager\Facades\Voyager::image($clinic->image) }}" alt="clinic">
+                    <a href="{{ $clinic->url ? $clinic->url : '#'  }}" target="_blank">
+                        <img src="{{ \TCG\Voyager\Facades\Voyager::image($clinic->image) }}" alt="clinic">
+                    </a>
                 </div>
                 <div class="text">
                     <div class="title">{{ $clinic->name }}</div>
@@ -56,7 +58,7 @@
                             <li>
                                 <i class="fa fa-globe" aria-hidden="true"></i>
                                 <span class="clinic-text"><a href="#"
-                                                             > {{ $clinic->url }}</a></span>
+                                    > {{ $clinic->url }}</a></span>
                             </li>
                         @endif
                         @if($clinic->phone)

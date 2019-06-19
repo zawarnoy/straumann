@@ -37,6 +37,8 @@ class CategoriesController extends Controller
             'category'  => $category,
             'previous'  => $previousId ? url('categories/' . $previous->slug) : '',
             'next'      => $nextId ? url('categories/' . $next->slug) : '',
+            'previousTitle' => $previousId ? $previous->name : '',
+            'nextTitle' => $nextId ? $next->name : '',
         ];
 
         return view('categories.show', $params);

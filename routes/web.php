@@ -22,6 +22,8 @@ Route::get('/pricing', 'MainController@pricing')->name('pricing.index');
 
 //Route::get('/news', 'NewsController@index');
 
+Route::get('/posts/{id}', 'PostsController@show')->name('posts.show');
+
 Route::get('/about', 'AboutController@index')->name('about.index');
 
 Route::get('/opportunities', 'TherapyOpportunitiesController@index');

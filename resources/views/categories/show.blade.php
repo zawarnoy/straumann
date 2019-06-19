@@ -64,23 +64,19 @@
             </div>
             <div class="nav">
                 @if ($previous)
-                    <a href="{{ url($previous) }}" class="prev">Предыдущая</a>
+                    <a href="{{ url($previous) }}" class="prev">{{ $previousTitle }}</a>
                 @endif
                 @if ($next)
-                    <a href="{{ url($next) }}" class="next">Следующая</a>
+                    <a href="{{ url($next) }}" class="next">{{ $nextTitle }}</a>
                 @endif
             </div>
             <div class="actions">
 
-                <div class="share">
-                    <span>Соц. сети:</span>
-                    <ul>
-                        <li><a href="#" target="_blank"><img src="{{ asset('img/facebook.png') }}" alt="facebook"></a>
-                        </li>
-                        <li><a href="#" target="_blank"><img src="{{ asset('img/instagram.png') }}" alt="instagram"></a>
-                        </li>
-                    </ul>
-                </div>
+                <script src="https://platform-api.sharethis.com/js/sharethis.js#property=5d0960691449a300127e1ae4&product=inline-follow-buttons">
+
+                </script>
+                <div class="sharethis-inline-follow-buttons"></div>
+
                 <div class="clearfix"></div>
             </div>
 

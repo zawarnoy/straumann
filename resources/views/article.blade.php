@@ -31,10 +31,10 @@
                 <div class="clearfix"></div>
             </div>
             <div class="nav">
-                @if ($previous)
+                @if (!empty($previous))
                     <a href="{{ url($previous) }}" class="prev">Предыдущая</a>
                 @endif
-                @if ($next)
+                @if (!empty($next))
                     <a href="{{ url($next) }}" class="next">Следующая</a>
                 @endif
             </div>

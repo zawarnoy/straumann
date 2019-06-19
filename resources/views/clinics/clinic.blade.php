@@ -57,8 +57,8 @@
                         @if($clinic->url)
                             <li>
                                 <i class="fa fa-globe" aria-hidden="true"></i>
-                                <span class="clinic-text"><a href="#"
-                                                             > {{ strpos($clinic->url, 'http') === false ? $clinic->url }}</a></span>
+                                <span class="clinic-text"><a target="_blank" href="{{ strpos($clinic->url, 'http') === false ? 'http://' .  $clinic->url : $clinic->url }}"
+                                    >{{ $clinic->url }}</a></span>
                             </li>
                         @endif
                         @if($clinic->phone)

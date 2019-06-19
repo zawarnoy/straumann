@@ -1,9 +1,8 @@
 <div class="cookie-panel">
     <div class="cookie-panel__content-wrapper">
         <div class="cookie-text">
-            We use cookies to personalise content and ads, to provide social media features and to analyse our traffic.
-            We also share information about your use of our site with our social media, advertising and analytics
-            partners.
+            Мы используем файлы cookie, чтобы облегчить вам пользование нашим веб-сайтом. Просматривая этот веб-сайт, вы
+            соглашаетесь с тем, что мы используем файлы cookie.
         </div>
 
         <a href="#" class="btn btn-green" id="accept-cookies">Принять куки</a>

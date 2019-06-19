@@ -6,12 +6,12 @@
 
     <section id="page__title">
         <div class="inner">
-            <div class="breadcrumbs">
-                <ul>
-                    <li><a href="#">Главная - </a></li>
-                    <li>Контакты</li>
-                </ul>
-            </div>
+{{--            <div class="breadcrumbs">--}}
+{{--                <ul>--}}
+{{--                    <li><a href="/">Главная - </a></li>--}}
+{{--                    <li>Контакты</li>--}}
+{{--                </ul>--}}
+{{--            </div>--}}
             <div class="bt"><span>Контакты</span></div>
             <div class="clearfix"></div>
         </div>

@@ -12,6 +12,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/cookie_panel.css') }}">
     <link rel="stylesheet" href="{{ asset('css/menu_buttons.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     @yield('additional_styles')
     {{--    <link rel="stylesheet" href="{{ asset('css/menu.css') }}">--}}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"

@@ -30,7 +30,7 @@
                 @foreach($category->documents as $document)
 
                     <div class="document-area">
-                        <img src="{{ !empty($document->image) ? \TCG\Voyager\Facades\Voyager::image($document->image) : asset('img/doc.ico') }}"
+                        <img src="{{ !empty($document->image) ? \TCG\Voyager\Facades\Voyager::image($document->image) : asset('img/doc_new.png') }}"
                              alt="">
                         <div class="document-data">
 

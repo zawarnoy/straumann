@@ -24,13 +24,15 @@
             </div>
             <div class="inn">
                 <div class="clinic-image-wrapper">
-                    <a href="{{ $clinic->url ? $clinic->url : '#'  }}" target="_blank">
+                    <a href="{{ strpos($clinic->url, 'http') === false ? 'http://' .  $clinic->url : $clinic->url }}" target="_blank">
                         <img src="{{ \TCG\Voyager\Facades\Voyager::image($clinic->image) }}" alt="clinic">
                     </a>
                 </div>
                 <div class="text">
                     <div class="title">{{ $clinic->name }}</div>
-                    <div class="clinic-description">{{ $clinic->description }}</div>
+                    <div class="clinic-description">
+                        {{ $clinic->description }}
+                    </div>
 
                     <ul>
                         @if($clinic->email)

@@ -15,4 +15,9 @@ class Clinic extends Model
     {
         return $this->hasMany(Human::class);
     }
+
+//    public function getUrlAttribute($url)
+//    {
+//        return strpos($url, 'http') === false ? 'http://' .  $url : $url;
+//    }
 }

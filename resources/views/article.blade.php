@@ -1,6 +1,9 @@
 @extends('layouts.layout')
 
-@section('title', 'Title')
+@section('title', $post->title)
+@section('additional_styles')
+    <link rel="stylesheet" href="{{ asset('css/posts.css') }}">
+@endsection
 
 @section('content')
 
@@ -17,7 +20,7 @@
         </div>
     </section>
 
-    <section id="content">
+    <section id="content" class="post-content">
         @if (!empty($post->show_image) && $post->image)
             <div class="thumbnail">
                 <img src="{{ \TCG\Voyager\Facades\Voyager::image($post->image) }}" alt="content">

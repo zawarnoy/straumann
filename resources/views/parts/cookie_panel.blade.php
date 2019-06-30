@@ -5,7 +5,7 @@
             соглашаетесь с тем, что мы используем файлы cookie.
         </div>
 
-        <a href="#" class="btn btn-green" id="accept-cookies">Принять куки</a>
+        <a href="#" class="btn btn-green" id="accept-cookies">Принять</a>
 
     </div>
 </div>

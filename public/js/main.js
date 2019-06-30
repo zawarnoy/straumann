@@ -366,4 +366,7 @@ $(document).ready(function () {
         $('.slick-next').trigger('click');
     }, 5000);
 
+    
+    $('iframe').wrap('<div class="iframe-container"></div>');
+
 });

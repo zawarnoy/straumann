@@ -43,16 +43,16 @@
             </div>
             <div class="actions">
 
-                <div class="share">
-                    <span>Соц. сети:</span>
-                    <ul>
-                        <li><a href="#" target="_blank"><img src="{{ asset('img/facebook.png') }}" alt="facebook"></a>
-                        </li>
-                        <li><a href="#" target="_blank"><img src="{{ asset('img/instagram.png') }}" alt="instagram"></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="clearfix"></div>
+{{--                <div class="share">--}}
+{{--                    <span>Соц. сети:</span>--}}
+{{--                    <ul>--}}
+{{--                        <li><a href="#" target="_blank"><img src="{{ asset('img/facebook.png') }}" alt="facebook"></a>--}}
+{{--                        </li>--}}
+{{--                        <li><a href="#" target="_blank"><img src="{{ asset('img/instagram.png') }}" alt="instagram"></a>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
+{{--                <div class="clearfix"></div>--}}
             </div>
 
             <div class="clearfix"></div>

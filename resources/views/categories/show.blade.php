@@ -28,7 +28,7 @@
 
             <div class="documents-list">
                 @foreach($category->documents as $document)
-
+                    @if (!empty(json_decode($document->file)[0]))
                     <div class="document-area">
                         <img src="{{ !empty($document->image) ? \TCG\Voyager\Facades\Voyager::image($document->image) : asset('img/doc_new.png') }}"
                              alt="">
@@ -53,6 +53,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
                 @endforeach
             </div>
         </div>
@@ -72,12 +73,12 @@
             </div>
             <div class="actions">
 
-                <script src="https://platform-api.sharethis.com/js/sharethis.js#property=5d0960691449a300127e1ae4&product=inline-follow-buttons">
+{{--                <script src="https://platform-api.sharethis.com/js/sharethis.js#property=5d0960691449a300127e1ae4&product=inline-follow-buttons">--}}
 
-                </script>
-                <div class="sharethis-inline-follow-buttons"></div>
+{{--                // </script>--}}
+{{--                // <div class="sharethis-inline-follow-buttons"></div>--}}
 
-                <div class="clearfix"></div>
+{{--                // <div class="clearfix"></div>--}}
             </div>
 
             <div class="clearfix"></div>

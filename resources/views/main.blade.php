@@ -18,8 +18,8 @@
                                 <div class="ov"></div>
                             </div>
                             <div class="inn inn_promo">
-                                <div class="title title_promo">{{ $post->title }}</div>
-                                <p class="text_promo">{!! html_entity_decode($post->body) !!}</p>
+                                <div class="title title_promo"  style="color:{{ $post->text_color ?: 'black' }}">{{ $post->title }}</div>
+                                <p class="text_promo" style="color:{{ $post->text_color ?: 'black' }}">{!! html_entity_decode($post->body) !!}</p>
                                 <a href="{{ $post->button_link ? $post->button_link : '/clinics' }}"
                                    class="btn btn-green btn-promo">{{ $post->button_text ? $post->button_text : 'найти клинику' }}</a>
                             </div>

@@ -43,5 +43,6 @@
 <script type="text/javascript" src="{{ asset('js/jquery.maskedinput.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/jquery.maskedinput.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+@yield('additional_scripts')
 </body>
 </html>

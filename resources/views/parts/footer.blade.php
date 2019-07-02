@@ -1,4 +1,4 @@
-<footer>
+<footer class="scroll-anchor">
     {!! setting('site.footer')  !!}
 </footer>
 

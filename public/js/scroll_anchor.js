@@ -4,6 +4,8 @@ var isAnimating = false;
 
 $(document).ready(function () {
 
+    console.log('qwe');
+
     function updateAnchors() {
         anchors = [];
         $('.scroll-anchor').each(function (i, element) {

@@ -1,18 +1,14 @@
 .choice-role-block {
     position: absolute;
     right: 30px;
-    top: 30px;
-    max-width: 150px;
+    top: 35px;
+    max-width: 165px;
     cursor: pointer;
 }
 
 .choice-role-text {
-    font-size: 1.7em;
-    display: none!important;
-}
-
-.choice-role-icon {
-    font-size: 2em;
+    font-size: 1.2em;
+    /*display: none!important;*/
 }
 
 @media screen and (min-width: 1700px) {
@@ -27,17 +23,13 @@ header .callback {
     top: 4px;
 }
 
-@media screen and (max-width: 1700px){
+@media screen and (max-width: 1700px) {
     header .callback {
         margin-right: 140px;
     }
 }
 
-@media screen and (max-width: 1500px){
-    .choice-role-text {
-        display: none;
-    }
-
+@media screen and (max-width: 1500px) {
     header .callback {
         margin-right: 60px;
     }

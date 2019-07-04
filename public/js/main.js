@@ -151,13 +151,12 @@ $(document).ready(function () {
         if (link) {
             window.open(link);
         }
-    })
+    });
 
     $('.choice-role-block').off('click').on('click', function (event) {
         event.preventDefault();
-
-        deleteCookie('role');
-        document.location.href = '/choice';
+        setCookie('role', getCookie('role') === 'patient' ? 'doctor' : 'patient');
+        document.location.href = '/';
     });
 });
 
@@ -166,6 +165,12 @@ function setCookie(cname, cvalue, expiredDays) {
     d.setTime(d.getTime() + (expiredDays * 24 * 60 * 60 * 1000));
     let expires = "expires=" + d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(name) {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length == 2) return parts.pop().split(";").shift();
 }
 
 function deleteCookie(name) {
@@ -364,7 +369,7 @@ $(document).ready(function () {
 
     setInterval(function () {
         $('.slick-next').trigger('click');
-    }, 5000);
+    }, 10000);
 
     
     $('iframe').wrap('<div class="iframe-container"></div>');

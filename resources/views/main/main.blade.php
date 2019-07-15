@@ -2,6 +2,10 @@
 
 @section('title', 'Straumann')
 
+@section('additional_styles')
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+@endsection
+
 @section('additional_scripts')
 
     <script type="text/javascript" async src="{{ asset('js/scroll_anchor.js') }}"></script>
@@ -61,29 +65,7 @@
     </section>
 
     @if (count($advantagesPosts))
-        <section id="advantages" class="scroll-anchor">
-            <div class="inner">
-
-                <div class="bt"><span>преимущества</span></div>
-                <ul>
-                    @php ($counter = 1)
-                    @foreach($advantagesPosts as $post)
-
-                        <li style=
-                            @if(!empty($post->background_image))
-                                    'background-image: {{ !empty(json_decode($post->background_image)) ? 'url(storage/' . json_decode($post->background_image)[0]->download_link . ')' : ''}}'
-                                @endif
-                        >
-                            <span>{{ $counter }}</span>
-                            <p>{{ $post->excerpt }}</p>
-                            <a href="{{ url("advantages/{$post->id}") }}"><i></i></a>
-                        </li>
-                        @php ($counter++)
-                    @endforeach
-                </ul>
-                <div class="clearfix"></div>
-            </div>
-        </section>
+        @include('main.parts.advantages_posts')
     @endif
 
     @if (count($severalNews))

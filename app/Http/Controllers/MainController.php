@@ -35,7 +35,7 @@ class MainController extends Controller
             'role' => $this->cookieChoicedRole,
         ];
 
-        return view('main', $params);
+        return view('main.new_main', $params);
     }
 
     public function choiceRole()

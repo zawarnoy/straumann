@@ -4136,8 +4136,8 @@ nav .close-menu {
     height: 40px;
     display: flex;
     position: absolute;
-    left: 0%;
-    bottom: 20%;
+    left: 0;
+    bottom: 5px;
 }
 
 .controls__line {
@@ -5512,6 +5512,31 @@ header .menu-bar {
 
     .promo-slide {
         padding: 0;
+    }
+
+    #news .img-wrapper img {
+        height: auto;
+    }
+
+    #advantages .controls__line {
+        display: none;
+    }
+
+    #advantages .advantage__controls {
+        margin-top: 10px;
+        position: initial;
+        display: flex;
+        justify-content: center;
+    }
+
+    #advantages .controls__arrows {
+        width: 100%;
+        justify-content: space-around;
+        display: flex;
+    }
+
+    #advantages .controls__arrow {
+        margin-left: 0;
     }
 
     #about {

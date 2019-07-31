@@ -25,6 +25,7 @@ $(document).ready(function () {
 
         const newHash = hashMap[newHashIndex];
         scrollToHash(newHash);
+        menuBacklight(newHash);
     }, {passive: false});
 
 
@@ -32,7 +33,7 @@ $(document).ready(function () {
         scrollToHash($(e.currentTarget).attr('href'));
     });
 
-    $('#advantages .menu__item').click(function(e) {
+    $('#advantages .menu__item').click(function (e) {
         const target = $(e.target);
         if (target.hasClass('menu__item_active')) {
             return;
@@ -66,7 +67,7 @@ $(document).ready(function () {
         const fadeTime = 500;
         const fadingElements = $("[data-is-fading]");
         fadingElements.fadeOut(fadeTime);
-        setTimeout(function() {
+        setTimeout(function () {
             const dataContainer = $('[data-advantages] [data-advantage-code="' + code + '"]');
             if (!dataContainer.length) {
                 return;
@@ -88,7 +89,7 @@ $(document).ready(function () {
         const fadeTime = 500;
         const fadingElements = $("[data-is-fading]");
         fadingElements.fadeOut(fadeTime);
-        setTimeout(function() {
+        setTimeout(function () {
             const dataContainer = $('[data-events] [data-event-code="' + code + '"]');
             if (!dataContainer.length) {
                 return;
@@ -116,5 +117,15 @@ $(document).ready(function () {
             window.location.hash = hash;
             window.preventScrollHandling = false;
         });
+    }
+
+    function menuBacklight(link) {
+        let $a = $('a[href="' + link + '"]');
+        $('.navigation li').removeClass('active');
+        if ($a.length) {
+            $a.parent().addClass('active');
+        } else {
+            $('.navigation li').first().addClass('active');
+        }
     }
 });

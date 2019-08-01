@@ -220,7 +220,7 @@
 {{--        <div class="advantages__flex-item advantages__flex-item_menu">--}}
 {{--            <ul class="advantage__menu">--}}
 {{--                <li class="menu__item menu__item_active"--}}
-{{--                    data-advantage-code="0">Мероприятие</li>--}}
+{{--                    data-event-code="0">Мероприятия</li>--}}
 {{--            </ul>--}}
 {{--        </div>--}}
 

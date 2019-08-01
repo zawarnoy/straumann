@@ -4077,7 +4077,7 @@ nav .close-menu {
 }
 
 
-#advantages {
+#advantages, #events {
     background: #fbfbfb;
     padding: 131px 0 0;
     height: calc(100vh - 193px);

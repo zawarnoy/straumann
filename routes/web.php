@@ -33,3 +33,9 @@ Route::get('/choice', 'MainController@choiceRole')->name('role.choice');
 Route::get('/categories', 'CategoriesController@index')->name('categories.index');
 
 Route::get('/categories/{slug}', 'CategoriesController@show')->name('categories.show');
+
+
+// pricing
+Route::get('/pricing', 'PricingController@index')->name('pricing.index');
+Route::get('/pricing/implants', 'PricingController@implants')->name('pricing.implants');
+Route::get('/pricing/prostheses', 'PricingController@prostheses')->name('pricing.prostheses');

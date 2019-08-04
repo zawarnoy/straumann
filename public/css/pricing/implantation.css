@@ -1,0 +1,389 @@
+a.back {
+    position: absolute;
+    left: 18%;
+    top: 130px;
+    display: inline-block;
+    margin-top: 17px;
+    height: 29px;
+    line-height: 30px;
+    background-color: #fff;
+    border: 2px solid #8fb91c;
+    padding: 1px 33px 0 38px;
+    border-radius: 20px;
+    font-family: "BrandonGrotesque", "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #8fb91c;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px
+}
+
+a.back:hover {
+    background-color: #8fb91c;
+    color: #fff
+}
+
+a.back span {
+    display: inline-block;
+    position: absolute;
+    margin-left: -15px
+}
+
+.desc-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 70%;
+    margin-top: 60px;
+    font-weight: 300;
+    font-size: 16px;
+    color: #666666;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+}
+
+.container h1.title {
+    font-family: "BrandonGrotesque", "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.title-container:before,
+.title-container:after {
+    content: '';
+    position: relative;
+    top: 27px;
+    width: 50px;
+    border-top: 1px solid #e5e5e5;
+    margin: 0 20px;
+}
+
+.pop_up_block_container {
+    background-color: #b4b4b4;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+    display: none;
+}
+
+.rastiart {
+    background-color: #8fb91c;
+    color: #fff !important;
+    padding: 7px 10px;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 14px;
+    text-decoration: none;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.rastiart:hover {
+    background-color: #5e751d;
+}
+
+
+
+
+.implants-pricing-table {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.table-header,
+.table-content,
+.table-footer {
+    padding: 10px;
+    border: 1px solid grey;
+    border-right: none;
+    vertical-align: middle;
+}
+
+.table-content,
+.table-footer {
+    border-top: none;
+}
+
+.table-header,
+.table-footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.table-content {
+    flex: 1;
+}
+
+div.inner-table {
+    display: inline-flex;
+    border: none;
+    padding: 0;
+    flex-direction: column;
+}
+
+.implants-pricing-table th {
+    text-align: left;
+}
+
+.implants-pricing-table .logo,
+.implants-pricing-table .logo-link {
+    width: 50px;
+    height: 50px;
+    display: inline;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.last-item div {
+    border-right: 1px solid grey;
+}
+
+.table-header {
+    height: 70px;
+}
+
+.table-footer {
+    height: 100px;
+}
+
+@media screen and (max-width: 1600px) {
+    .container {
+        width: 90%;
+    }
+
+    a.back {
+        left: 5%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .implants-pricing-table {
+        display: block;
+    }
+
+    .table-header,
+    .table-footer {
+        height: auto;
+    }
+
+    .table-header .logo-link {
+        display: none;
+    }
+
+    .inner-table {
+        margin-bottom: 50px;
+        border-right: 1px solid grey;
+    }
+
+    .inner-table div {
+        border-right: 1px solid grey;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    a.back {
+        top: 90px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    a.back {
+        top: 60px;
+    }
+}
+
+
+.cookie-container {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    overflow: hidden;
+    width: 90%;
+    text-align: center;
+}
+
+.container {
+    width: 65%;
+    margin-top: 60px;
+    font-weight: 300;
+    font-size: 16px;
+    color: #666666;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+}
+
+.container h1.title {
+    font-family: "BrandonGrotesque", "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.title-container:before,
+.title-container:after {
+    content: '';
+    position: relative;
+    top: 27px;
+    width: 50px;
+    border-top: 1px solid #e5e5e5;
+    margin: 0 20px;
+}
+
+
+
+.pop_up_block_container {
+    background-color: #b4b4b4;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+    display: none;
+    padding: 10px;
+}
+
+.pop_up_block {
+    left: 58%;
+    position: relative;
+    height: 60px;
+}
+
+.pop_up {
+    float: right;
+    padding-top: 10px;
+}
+
+.pop_up span {
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    border: 2px solid #6b6b6b;
+    padding: 1px 7px 0 8px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #fff !important;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 105px;
+    cursor: pointer;
+}
+
+.container_po {
+    position: absolute;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    overflow: hidden;
+    background-color: #3a7732;
+}
+
+.pop_up span:hover {
+    background-color: #6b6b6b;
+}
+
+.pop_up2 {
+    float: right;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+.pop_up2 span:hover {
+    background-color: #3a7732;
+}
+
+.pop_up2 span {
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    border: 2px solid #3a7732;
+    padding: 1px 7px 0 8px;
+    border-radius: 20px;
+    font-family: "BrandonGrotesque", "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #fff !important;
+    text-decoration: none;
+    letter-spacing: 1px;
+    width: 105px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.hide {
+    display: none !important;
+}
+
+.container_pop_up {
+    position: absolute;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    overflow: hidden;
+    background-color: #ccc;
+}
+
+.line3 {
+    height: 45px;
+    background-color: #b4b4b4;
+}
+
+.line4 {
+    background-color: #b4b4b4;
+    display: none;
+}
+
+.line4 span {
+    color: #fff;
+    font-size: 14px;
+    width: 76%;
+    text-align: justify;
+    height: 60px;
+}
+
+.pop_up_block_container {
+    background-color: #b4b4b4;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+    display: none;
+}
+
+.line {
+    display: inline-block;
+    position: relative;
+    background-color: #b4b4b4;
+}
+
+.line span {
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    padding-top: 20px;
+    text-align: center;
+}

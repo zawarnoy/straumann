@@ -1,34 +1,14 @@
-a.back {
+a.btn.back {
+    width: 140px;
+    height: 40px;
     position: absolute;
-    left: 18%;
-    top: 130px;
-    display: inline-block;
-    margin-top: 17px;
-    height: 29px;
-    line-height: 30px;
-    background-color: #fff;
-    border: 2px solid #8fb91c;
-    padding: 1px 33px 0 38px;
-    border-radius: 20px;
-    font-family: "BrandonGrotesque", "Open Sans", sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    color: #8fb91c;
-    text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
-    letter-spacing: 1px
-}
-
-a.back:hover {
-    background-color: #8fb91c;
-    color: #fff
+    left: 0;
+    top: 8px;
 }
 
 a.back span {
-    display: inline-block;
-    position: absolute;
-    margin-left: -15px
+    position: relative;
+    top: -13px;
 }
 
 .desc-page {
@@ -62,6 +42,7 @@ a.back span {
 .title-container {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .container h1.title {
@@ -358,13 +339,18 @@ p {
     .learn-more {
         position: relative;
     }
+
+    a.btn.back {
+        top: -50px;
+        left: calc(50% - 70px);
+    }
+
+    .title-container {
+        margin-top: 80px !important;
+    }
 }
 
 @media screen and (max-width: 900px) {
-    a.back {
-        display: none;
-    }
-
     .columned {
         display: block;
     }

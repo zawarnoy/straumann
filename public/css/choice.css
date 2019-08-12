@@ -1,3 +1,14 @@
 header .logo a img {
     height: 75px!important;
 }
+
+@media screen and (max-width: 559px)
+{
+    header {
+        height: 78px!important;
+    }
+
+    .choice-role {
+        margin-top: 23px;
+    }
+}

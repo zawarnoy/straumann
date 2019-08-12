@@ -7,6 +7,7 @@
 
             <div class="choice-role-block">
                 <span class="choice-role-text">{{ request()->cookie('role') == 'patient' ? 'Для стоматологов' : 'Для пациентов' }}</span>
+                <i class="fa fa-door-open choice-role-icon" title="Сменить роль"></i>
             </div>
             {!! request()->cookie('role') == 'patient' ? menu('frontend') : menu('frontend_doctor') !!}
         </ul>

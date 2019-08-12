@@ -6,8 +6,8 @@
 
 @section('content')
     <section class="desc-page">
-        <a href="{{ route('pricing.index') }}" class="back"><span>&lt;</span>Назад</a>
         <div class="container title-container">
+            <a href="{{ route('pricing.index') }}" class="back btn btn-white btn-b"><span>Назад</span></a>
             <h1 class="title">ЦЕНЫ НА ПРОТЕЗИРОВАНИЕ ЗУБОВ</h1>
         </div>
         <div class="full-width-image"

@@ -4102,6 +4102,7 @@ nav .close-menu {
 }
 
 .advantages__flex-item_menu {
+    margin-left: 40px;
     width: 40%;
     transition: .5s;
 }
@@ -4132,9 +4133,10 @@ nav .close-menu {
 }
 
 .advantage__controls {
+    display: none;
     width: 150%;
     height: 40px;
-    display: flex;
+    /*display: flex;*/
     position: absolute;
     left: 0;
     bottom: 5px;
@@ -5527,6 +5529,10 @@ header .menu-bar {
         position: initial;
         display: flex;
         justify-content: center;
+    }
+
+    .advantages__flex-item_menu {
+        margin-left: 0;
     }
 
     #advantages .controls__arrows {

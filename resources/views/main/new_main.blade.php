@@ -24,70 +24,7 @@
 <div class="stub"></div>
 <header class="scroll-anchor">
     <div class="inner">
-        <div class="logo"><a href="http://skipper.a2a4.by"><img src="http://skipper.a2a4.by/img/site_logo.svg"
-                                                                alt="logo"></a></div>
-        <nav>
-            <i class="fa fa-bars menu-bar" aria-hidden="true"></i>
-            <ul>
-                <i class="fa fa-times close-menu hidden" aria-hidden="true"></i>
-
-                <div class="choice-role-block">
-                    <span class="choice-role-text">Для пациентов</span>
-                </div>
-                <ul class="navigation">
-
-
-                    <li class="active">
-                        <a href="#slider" target="_self" style="">
-
-                            <span>Главная</span>
-                        </a>
-                    </li>
-
-
-                    <li class="">
-                        <a href="#about" target="_self" style="">
-
-                            <span>О нас</span>
-                        </a>
-                    </li>
-
-
-                    <li class="">
-                        <a href="#advantages" target="_self" style="">
-
-                            <span>Преимущества Straumann</span>
-                        </a>
-                    </li>
-
-
-                    <li class="">
-                        <a href="http://skipper.a2a4.by/categories" target="_self" style="">
-
-                            <span>Каталоги</span>
-                        </a>
-                    </li>
-
-
-                    <li class="">
-                        <a href="http://skipper.a2a4.by/contacts" target="_self" style="">
-
-                            <span>Мероприятия</span>
-                        </a>
-                    </li>
-
-
-                    <li class="">
-                        <a href="http://skipper.a2a4.by/contacts" target="_self" style="">
-
-                            <span>Контакты</span>
-                        </a>
-                    </li>
-
-                </ul>
-
-            </ul>
-        </nav>
+        @include('parts.menu')
         <div class="clearfix"></div>
     </div>
 </header>
@@ -205,7 +142,6 @@
                                 <div class="title">
                                     <a href="{{ url("news/{$post->id}") }}">{{ $post->title }}</a>
                                 </div>
-                                <div class="excerpt">{{ $post->excerpt }}</div>
                                 <a href="{{ url("news/{$post->id}") }}" class="more"></a>
                             </div>
                         </li>

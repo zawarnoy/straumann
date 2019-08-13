@@ -107,7 +107,7 @@
                 </div>
                 <div class="inner-table last-item">
                     <div class="table-header">
-                        <strong>Титановый имплант</strong>
+                        <strong>Обычный имплант</strong>
                     </div>
                     <div class="table-content">
                         В мире существует свыше 1800 производителей

@@ -4077,7 +4077,7 @@ nav .close-menu {
 }
 
 
-#advantages, #events {
+#advantages {
     background: #fbfbfb;
     padding: 131px 0 0;
     height: calc(100vh - 193px);
@@ -4102,7 +4102,6 @@ nav .close-menu {
 }
 
 .advantages__flex-item_menu {
-    margin-left: 40px;
     width: 40%;
     transition: .5s;
 }
@@ -4133,7 +4132,6 @@ nav .close-menu {
 }
 
 .advantage__controls {
-    display: none;
     width: 150%;
     height: 40px;
     /*display: flex;*/
@@ -4178,7 +4176,7 @@ nav .close-menu {
 
 .advantage__background {
     position: absolute;
-    left: 5%;
+    left: 25%;
     height: 70%;
     opacity: 0.8;
     transition: .5s;
@@ -5514,35 +5512,6 @@ header .menu-bar {
 
     .promo-slide {
         padding: 0;
-    }
-
-    #news .img-wrapper img {
-        height: auto;
-    }
-
-    #advantages .controls__line {
-        display: none;
-    }
-
-    #advantages .advantage__controls {
-        margin-top: 10px;
-        position: initial;
-        display: flex;
-        justify-content: center;
-    }
-
-    .advantages__flex-item_menu {
-        margin-left: 0;
-    }
-
-    #advantages .controls__arrows {
-        width: 100%;
-        justify-content: space-around;
-        display: flex;
-    }
-
-    #advantages .controls__arrow {
-        margin-left: 0;
     }
 
     #about {

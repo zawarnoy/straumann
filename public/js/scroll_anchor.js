@@ -29,8 +29,23 @@ $(document).ready(function () {
     }, {passive: false});
 
 
-    $('.navigation a').click(function (e) {
-        scrollToHash($(e.currentTarget).attr('href'));
+    $('nav a').click(function (e) {
+
+        let $this = $(this),
+            hash = $this.prop('hash');
+
+        if (hashMap.indexOf(hash) === -1) {
+            return;
+        }
+
+        let $link = $this.closest('ul').find('a[href*="' + hash + '"]').parent(),
+            $links = $('nav ul li');
+
+        $links.removeClass('active');
+        $link.addClass('active');
+
+        e.preventDefault();
+        scrollToHash(hash);
     });
 
     $('#advantages .menu__item').click(function (e) {

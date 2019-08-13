@@ -1,21 +1,15 @@
-a.btn.back {
-    width: 140px;
-    height: 40px;
-    position: absolute;
-    left: 0;
-    top: 8px;
-}
-
-a.back span {
-    position: relative;
-    top: -13px;
-}
-
 .desc-page {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.underline {
+    width: 65%;
+    height: 1px;
+    background-color: #84aa22;
+    margin: 0 0 50px;
 }
 
 .container {
@@ -43,27 +37,26 @@ a.back span {
 .container h1.title {
     font-family: "BrandonGrotesque", "Open Sans", sans-serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 36px;
     color: #000;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center;
 }
 
-.title-container:before,
 .title-container:after {
     content: '';
     position: relative;
-    top: 27px;
-    width: 50px;
-    border-top: 1px solid #e5e5e5;
+    top: 40px;
+    width: 100%;
+    border-top: 2px solid #84aa22;
     margin: 0 20px;
 }
 
 .pricing-content {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16px;
-    color: #666666;
+    color: #000000;
     text-align: justify;
     letter-spacing: 1px;
     line-height: 24px;
@@ -247,10 +240,6 @@ a.back span {
 }
 
 @media screen and (max-width: 1280px) {
-    a.btn.back {
-        top: -50px;
-        left: calc(50% - 70px);
-    }
 
     .title-container {
         margin-top: 80px !important;
@@ -283,31 +272,6 @@ a.back span {
     color: #666666;
     letter-spacing: 1px;
     line-height: 24px;
-}
-
-.title-container {
-    display: flex;
-    justify-content: center;
-}
-
-.container h1.title {
-    font-family: "BrandonGrotesque", "Open Sans", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    color: #000;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-}
-
-.title-container:before,
-.title-container:after {
-    content: '';
-    position: relative;
-    top: 27px;
-    width: 50px;
-    border-top: 1px solid #e5e5e5;
-    margin: 0 20px;
 }
 
 

@@ -106,7 +106,7 @@
 
         <div class="container section_border">
             <div class="title-container section-title-container">
-                <h1 class="title">ВОССТАНОВЛЕНИЕ НЕСКОЛЬКИХ ЗУБ</h1>
+                <h1 class="title">ВОССТАНОВЛЕНИЕ НЕСКОЛЬКИХ ЗУБОВ</h1>
             </div>
             <div class="service-section">
                 <div class="service-image"><img src="https://straumann.lv/wp-content/uploads/2016/06/22.png"></div>

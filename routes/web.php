@@ -34,6 +34,7 @@ Route::get('/categories', 'CategoriesController@index')->name('categories.index'
 
 Route::get('/categories/{slug}', 'CategoriesController@show')->name('categories.show');
 
+Route::get('/advantages', 'AdvantageController@index')->name('advantages.index');
 
 // pricing
 Route::get('/pricing', 'PricingController@index')->name('pricing.index');

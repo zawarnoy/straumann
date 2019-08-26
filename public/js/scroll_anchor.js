@@ -2,6 +2,7 @@ $(document).ready(function () {
     const hashMap = ['#slider', '#about', '#advantages', '#news'];
     let preventScrollHandling = false;
     switchAdvantageByCode(0);
+    switchActiveMenuByHash(window.location.hash);
 
     window.addEventListener('mousewheel', function (e) {
         if (window.innerWidth < 769) {
@@ -34,15 +35,9 @@ $(document).ready(function () {
         let $this = $(this),
             hash = $this.prop('hash');
 
-        if (hashMap.indexOf(hash) === -1) {
+        if (!switchActiveMenuByHash(hash)) {
             return;
         }
-
-        let $link = $this.closest('ul').find('a[href*="' + hash + '"]').parent(),
-            $links = $('nav ul li');
-
-        $links.removeClass('active');
-        $link.addClass('active');
 
         e.preventDefault();
         scrollToHash(hash);
@@ -73,6 +68,19 @@ $(document).ready(function () {
         }
         switchAdvantageByCode($requiredItem.data('advantage-code'));
     });
+
+    function switchActiveMenuByHash(hash) {
+        if (hashMap.indexOf(hash) === -1) {
+            return false;
+        }
+
+        let $link = $('nav ul').find('a[href*="' + hash + '"]').parent(),
+            $links = $('nav ul li');
+
+        $links.removeClass('active');
+        $link.addClass('active');
+        return true;
+    }
 
     function switchAdvantageByCode(code) {
         const classActive = 'menu__item_active';

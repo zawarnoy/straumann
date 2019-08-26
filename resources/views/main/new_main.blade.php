@@ -30,6 +30,16 @@
 </header>
 <div class="content">
 
+    <script>
+        window.onload = () => {
+            $('#promoFade').fadeIn(1000);
+            $('#fadePlaceholder').hide();
+        }
+    </script>
+
+    <div id="fadePlaceholder" style="display: block; width: 100vw; height: 100vh;"></div>
+
+    <section id="promoFade" style="display: none">
     <section id="promo" class="scroll-anchor" data-hash="slider">
         <div class="ov"></div>
         <div>

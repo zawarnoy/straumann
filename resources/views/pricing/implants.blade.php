@@ -7,13 +7,12 @@
 @section('content')
     <section class="desc-page lab lab_additional">
         <div class="container title-container">
-            <a href="{{ route('pricing.index') }}" class="back btn btn-white btn-b"><span>Назад</span></a>
             <h1 class="title">ЦЕНЫ НА ИМПЛАНТАЦИЮ ЗУБОВ</h1>
         </div>
         <div class="full-width-image"
              style="background-image: url(https://straumann.lv/wp-content/uploads/2015/03/Screen-Shot-2015-03-06-at-15.28.21.png);">
         </div>
-        <div class="container pricing-content">
+        <div class="container pricing-content text">
             Лечение имплантатами имеет один из самых высоких прогнозов успеха в среде медицины- 92-99%.
             Поэтому имплантацию можно выбирать смело. Но советуем обратить внимание кокой имплантат вам
             будет ставиться. Как показало, самое крупное исследование в мире (2.765 пациента, 11.311
@@ -60,7 +59,7 @@
 								<a href="https://straumann.lv/ru/straumann-preimushestva/">
 									<img class="logo"
                                          src="https://straumann.lv/wp-content/uploads/2016/06/SLActive.jpg"
-                                         alt="SLActive" width="50" height="50"/>
+                                         alt="SLActive" width="50" height="50" />
 								</a>
 							</span>
                     </div>
@@ -71,7 +70,7 @@
 									<a class="logo-link"
                                        href="https://straumann.lv/ru/straumann-preimushestva/">
 									<img class="logo"
-                                         src="https://straumann.lv/wp-content/uploads/2016/06/Roxolid.jpg"/></a>
+                                         src="https://straumann.lv/wp-content/uploads/2016/06/Roxolid.jpg" /></a>
 										<strong><span
                                                     style="display: inline; padding: 0; margin: 0; line-height: 50px;">
 									Имплант
@@ -100,7 +99,7 @@
 								<a href="https://straumann.lv/ru/straumann-preimushestva/">
 									<img class="logo"
                                          src="https://straumann.lv/wp-content/uploads/2016/06/Roxolid.jpg"
-                                         alt="SLActive" width="50" height="50"/>
+                                         alt="SLActive" width="50" height="50" />
 								</a>
 							</span>
                     </div>
@@ -128,7 +127,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="underline"></div>
     </section>
 
 @endsection

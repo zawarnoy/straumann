@@ -6,7 +6,7 @@
 
 @section('content')
     <section class="desc-page lab lab_additional">
-        <div class="container">
+        <div class="container title-container">
             <h1 class="title">ЦЕНЫ</h1>
         </div>
         <div class="full-width-image"
@@ -42,6 +42,7 @@
                 </div>
             </div>
         </div>
+        <div class="underline"></div>
     </section>
 
 @endsection

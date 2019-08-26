@@ -1,0 +1,163 @@
+.desc-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.underline {
+    width: 50%;
+    height: 1px;
+    background-color: #84aa22;
+}
+
+.underline-last {
+    margin-bottom: 60px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin-top: 60px;
+}
+
+.container-last {
+    margin-bottom: 10px;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.container h1.title {
+    font-family: "BrandonGrotesque", "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.title-container:after {
+    content: '';
+    position: relative;
+    top: 40px;
+    width: 100%;
+    border-top: 2px solid #84aa22;
+    margin: 0 20px;
+}
+
+.advantage-block {
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 24px;
+    display: flex;
+}
+
+.advantage-media {
+    width: 40%;
+    padding: 20px;
+    padding-left: 0;
+}
+
+.advantage-media-inner {
+    width: 100%;
+    position: relative;
+}
+
+.advantage-media-inner img {
+    width: 100%;
+}
+
+.advantage-media-inner iframe {
+    height: 210px;
+}
+
+.advantage-content {
+    width: 60%;
+    padding-bottom: 40px;
+    padding-left: 20px;
+}
+
+.advantage-text p {
+    padding-bottom: 20px;
+}
+
+.advantage-text ul {
+    padding-left: 35px;
+}
+
+.advantage-text ul li:before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #8fb91c;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 14px;
+    margin-left: -20px;
+}
+
+.advantage-text .inline-link {
+    color: #666666;
+    text-decoration: underline;
+    letter-spacing: 1px;
+}
+
+
+@media screen and (max-width: 1600px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .title-container {
+        margin-top: 80px !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .advantage-block {
+        display: block;
+        text-align: center;
+    }
+
+    .advantage-media {
+        padding: 0;
+        width: 100%;
+    }
+
+    .advantage-content {
+        text-align: justify;
+        width: 100%;
+    }
+
+    .advantage-media-inner iframe {
+        height: 50vw;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .desc-page {
+        margin-bottom: 115px;
+    }
+}
+
+.about-block .image {
+    float: left;
+    width: 500px;
+    overflow: hidden;
+    margin-bottom: 50px
+}

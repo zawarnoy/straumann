@@ -19,4 +19,11 @@ class AdvantageController extends Controller
             'next'      => $nextId ? url('advantages/' . $nextId) : null,
         ]);
     }
+
+    public function index()
+    {
+        $advantages = Advantage::all();
+
+        return view('advantages.index', ['advantages' => $advantages]);
+    }
 }

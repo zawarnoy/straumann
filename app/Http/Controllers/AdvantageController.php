@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Advantage;
+use App\PageAdvantage;
 
 class AdvantageController extends Controller
 {
@@ -22,8 +23,6 @@ class AdvantageController extends Controller
 
     public function index()
     {
-        $advantages = Advantage::all();
-
-        return view('advantages.index', ['advantages' => $advantages]);
+        return view('advantages.index', ['advantages' => PageAdvantage::all()]);
     }
 }

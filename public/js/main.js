@@ -158,6 +158,10 @@ $(document).ready(function () {
         setCookie('role', getCookie('role') === 'patient' ? 'doctor' : 'patient');
         document.location.href = '/';
     });
+
+    $('#feedback input').on('click', function (e) {
+        $(this).focus();
+    });
 });
 
 function setCookie(cname, cvalue, expiredDays) {

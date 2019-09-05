@@ -140,7 +140,7 @@
                                         <div class="event-info__item event-info__item_money">{{ $event->price }}</div>
                                     @endif
                                 </div>
-                                <a href="" class="event-btn">зарезервировать место</a>
+                                <a href="#feedback" class="event-btn open__modal">зарезервировать место</a>
                             </div>
                         </div>
                     </div>
@@ -153,4 +153,23 @@
         </section>
     </div>
 
+@endsection
+
+@section('callback_form')
+    <div id="feedback" class="box__modal">
+        <div class="inn">
+            <div class="bt">Зарезервировать место</div>
+            <div class="form">
+                <form action="javascript:void(null);" method="post" id="form_callback"
+                      onsubmit="sendForm('form_callback');">
+                    <input type="text" name="name" required="" placeholder="Ваше имя">
+                    <input type="text" name="org" placeholder="Организация">
+                    <input type="email" name="email" required="" placeholder="E-mail">
+                    <input type="tel" name="phone" required="" class="i_phone" placeholder="Телефон">
+                    <input type="hidden" name="subject" value="Зарезервировать место">
+                    <input type="submit" value="Заказать звонок" class="btn btn-green">
+                </form>
+            </div>
+        </div>
+    </div>
 @endsection

@@ -30,20 +30,20 @@
                             <div class="filter__subtitle">Все темы</div>
                         </div>
                         <div class="filter__option-list" data-filter-menu="topic">
-                            <span class="filter__option" data-filter-option="1"><input type="checkbox">topic 1</span>
-                            <span class="filter__option" data-filter-option="2"><input type="checkbox">topic 2</span>
-                            <span class="filter__option" data-filter-option="3"><input type="checkbox">topic 3</span>
+                            @foreach($unique_topics as $topic)
+                                <span class="filter__option" data-filter-option="{{ $topic }}"><input type="checkbox">{{ $topic }}</span>
+                            @endforeach
                         </div>
                     </div>
                     <div class="filters__item filters__selector-container" data-filter-type="country">
                         <div class="filters__text">
                             <div class="filter__title">Страна</div>
-                            <div class="filter__subtitle">Все семинары</div>
+                            <div class="filter__subtitle">Все страны</div>
                         </div>
                         <div class="filter__option-list" data-filter-menu="country">
-                            <span class="filter__option" data-filter-option="1"><input type="checkbox">country 1</span>
-                            <span class="filter__option" data-filter-option="2"><input type="checkbox">country 2</span>
-                            <span class="filter__option" data-filter-option="3"><input type="checkbox">country 3</span>
+                            @foreach($unique_countries as $country)
+                                <span class="filter__option" data-filter-option="{{ $country }}"><input type="checkbox">{{ $country }}</span>
+                            @endforeach
                         </div>
                     </div>
                     <div class="filters__item filters__selector-container" data-filter-type="date">
@@ -52,9 +52,10 @@
                             <div class="filter__subtitle">Все месяцы</div>
                         </div>
                         <div class="filter__option-list" data-filter-menu="date">
-                            <span class="filter__option" data-filter-option="1"><input type="checkbox">date 1</span>
-                            <span class="filter__option" data-filter-option="2"><input type="checkbox">date 2</span>
-                            <span class="filter__option" data-filter-option="3"><input type="checkbox">date 3</span>
+                            @foreach($unique_dates as $unique_date)
+                                <span class="filter__option" data-filter-option="{{ $unique_date }}"><input
+                                            type="checkbox">{{ $unique_date }}</span>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -69,31 +70,33 @@
                             <div class="filter__subtitle">Все темы</div>
                         </div>
                         <div class="filter__option-list" data-filter-menu="topic">
-                            <span class="filter__option" data-filter-option="1"><input type="checkbox">topic 1</span>
-                            <span class="filter__option" data-filter-option="2"><input type="checkbox">topic 2</span>
-                            <span class="filter__option" data-filter-option="3"><input type="checkbox">topic 3</span>
+                            @foreach($unique_topics as $topic)
+                                <span class="filter__option" data-filter-option="{{ $topic }}"><input type="checkbox">{{ $topic }}</span>
+                            @endforeach
                         </div>
                     </div>
-                    <div class="filters__item filters__item_modal filters__selector-container" data-filter-type="country">
+                    <div class="filters__item filters__item_modal filters__selector-container"
+                         data-filter-type="country">
                         <div class="filters__text">
                             <div class="filter__title">Страна</div>
-                            <div class="filter__subtitle">Все семинары</div>
+                            <div class="filter__subtitle">Все</div>
                         </div>
                         <div class="filter__option-list" data-filter-menu="country">
-                            <span class="filter__option" data-filter-option="1"><input type="checkbox">country 1</span>
-                            <span class="filter__option" data-filter-option="2"><input type="checkbox">country 2</span>
-                            <span class="filter__option" data-filter-option="3"><input type="checkbox">country 3</span>
+                            @foreach($unique_countries as $country)
+                                <span class="filter__option" data-filter-option="{{ $country }}"><input type="checkbox">{{ $country }}</span>
+                            @endforeach
                         </div>
                     </div>
                     <div class="filters__item filters__item_modal filters__selector-container" data-filter-type="date">
                         <div class="filters__text">
                             <div class="filter__title">Дата</div>
-                            <div class="filter__subtitle">Все месяцы</div>
+                            <div class="filter__subtitle">Все</div>
                         </div>
                         <div class="filter__option-list" data-filter-menu="date">
-                            <span class="filter__option" data-filter-option="1"><input type="checkbox">date 1</span>
-                            <span class="filter__option" data-filter-option="2"><input type="checkbox">date 2</span>
-                            <span class="filter__option" data-filter-option="3"><input type="checkbox">date 3</span>
+                            @foreach($unique_dates as $unique_date)
+                                <span class="filter__option" data-filter-option="{{ $unique_date }}"><input
+                                            type="checkbox">{{ $unique_date }}</span>
+                            @endforeach
                         </div>
                     </div>
                     <div class="filters-modal__close"><span>Закрыть</span></div>
@@ -101,52 +104,47 @@
             </div>
 
             <div class="events-block">
-                <div class="event" data-topic="1;2">
-                    <div class="event-wrapper">
-                        <div class="event__preview">
-                            <img src="https://www.medgrupe.lt/assets/Uploads/Lecturers/db384dffb0/lektorius-1-algirdas-puisys-1920x1534.jpg" class="event-img">
-                            <div class="event-content">
-                                <a href="#" class="event-title">Мягкие ткани рта.<br>Имплантация в эстетической зоне.</a>
-                                <div class="event-short-info">Регулируемые 2-дневные теоретико-практические курсы</div>
-                                <div class="event-lector">Lectorius <b>Dr. Algirdas Puišys</b></div>
-                            </div>
-                        </div>
-                        <div class="event-right-block">
-                            <div class="event-info">
-                                <div class="event-info__item event-info__item_pin">Vilniaus implantologijos centras (Polocko g. 21, Vilnius)</div>
-                                <div class="event-info__item event-info__item_calendar">2019 m. rugsėjo 5 - 6 d.</div>
-                                <div class="event-info__item event-info__item_watches">9.00-17.00 val.</div>
-                                <div class="event-info__item event-info__item_text">Rusų kalba</div>
-                                <div class="event-info__item event-info__item_persons">16 dalyvių/vietų</div>
-                                <div class="event-info__item event-info__item_money">1600 EUR</div>
-                            </div>
-                            <a href="#" class="event-btn">зарезервировать место</a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="event" data-topic="1" data-date="3">
-                    <div class="event-wrapper">
-                        <div class="event__preview">
-                            <img src="https://www.medgrupe.lt/assets/Uploads/Seminars/1c9f40a723/dr-nazar.jpg" class="event-img">
-                            <div class="event-content">
-                                <a href="#" class="event-title">Аналоговая и цифровая стоматология</a>
-                                <div class="event-short-info">Однодневный теоретический курс</div>
-                                <div class="event-lector">Lectorius <b>Dr. Nazariy Mykhaylyuk</b></div>
+                @foreach($events as $event)
+                    <div class="event" data-date="{{ $event->date }}" data-country="{{ $event->country }}"
+                         data-topic="{{ $event->topic }}">
+                        <div class="event-wrapper">
+                            <div class="event__preview">
+                                <img src="{{ \TCG\Voyager\Facades\Voyager::image($event->image) }}" class="event-img">
+                                <div class="event-content">
+                                    <a href="{{ $event->link }}" target="_blank"
+                                       class="event-title">{{ $event->title }}</a>
+                                    <div class="event-short-info">{{ $event->description }}</div>
+                                    <div class="event-lector">Лектор <b>{{ $event->lector }}</b></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="event-right-block">
-                            <div class="event-info">
-                                <div class="event-info__item event-info__item_pin">Viešbutis NOVOTEL (Gedimino pr. 16, Vilnius)</div>
-                                <div class="event-info__item event-info__item_calendar">2019 m. rugsėjo 7 d.</div>
-                                <div class="event-info__item event-info__item_watches">10.00-18.00 val.</div>
-                                <div class="event-info__item event-info__item_text">Anglų kalba</div>
-                                <div class="event-info__item event-info__item_money">350 EUR</div>
+                            <div class="event-right-block">
+                                <div class="event-info">
+                                    @if ($event->date)
+                                        <div class="event-info__item event-info__item_calendar">{{ $event->date }}</div>
+                                    @endif
+
+                                    @if ($event->adress)
+                                        <div class="event-info__item event-info__item_pin">{{ $event->adress }}</div>
+                                    @endif
+
+                                    @if ($event->time)
+                                        <div class="event-info__item event-info__item_watches">{{ $event->time }}</div>
+                                    @endif
+
+                                    @if($event->persons)
+                                        <div class="event-info__item event-info__item_persons">{{ $event->persons }}</div>
+                                    @endif
+
+                                    @if($event->price)
+                                        <div class="event-info__item event-info__item_money">{{ $event->price }}</div>
+                                    @endif
+                                </div>
+                                <a href="" class="event-btn">зарезервировать место</a>
                             </div>
-                            <a href="#" class="event-btn">зарезервировать место</a>
                         </div>
                     </div>
-                </div>
+                @endforeach
 
                 <div id="shadow"></div>
                 <div id="emptyState" class="hidden">No events</div>

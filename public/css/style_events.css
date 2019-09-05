@@ -565,3 +565,7 @@
         font-size: 14px;
     }
 }
+
+footer {
+    position: relative!important;
+}

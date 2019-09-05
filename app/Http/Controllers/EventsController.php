@@ -8,6 +8,13 @@ class EventsController
 {
     public function index()
     {
-        return view('events.index', ['events' => Event::all()]);
+        $params = [
+            'events'           => Event::all(),
+            'unique_dates'     => Event::getUniqueDates(),
+            'unique_topics'    => Event::getUniqueTopics(),
+            'unique_countries' => Event::getUniqueCountries(),
+        ];
+
+        return view('events.index', $params);
     }
 }

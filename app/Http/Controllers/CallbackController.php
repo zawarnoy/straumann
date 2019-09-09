@@ -2,16 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Service\EmailServiceInterface;
 use Illuminate\Http\Request;
 
 class CallbackController
 {
+
+    /**
+     * @var EmailServiceInterface
+     */
+    private $emailService;
+
+    public function __construct(EmailServiceInterface $emailService)
+    {
+        $this->emailService = $emailService;
+    }
+
     public function handleCallback(Request $request)
     {
-        if (!($email = setting('admin.email'))) {
-            return;
-        }
-
-        // todo добавить сервис провайдер для писем и мейлер
+        return $this->emailService->sendFromRequest($request);
     }
 }

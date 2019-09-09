@@ -41,3 +41,5 @@ Route::get('/events', 'EventsController@index')->name('events.index');
 Route::get('/pricing', 'PricingController@index')->name('pricing.index');
 Route::get('/pricing/implants', 'PricingController@implants')->name('pricing.implants');
 Route::get('/pricing/prostheses', 'PricingController@prostheses')->name('pricing.prostheses');
+
+Route::post('/send', 'CallbackController@handleCallback')->name('callback.handle');

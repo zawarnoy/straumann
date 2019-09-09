@@ -162,6 +162,7 @@
             <div class="form">
                 <form action="javascript:void(null);" method="post" id="form_callback"
                       onsubmit="sendForm('form_callback');">
+                    @csrf
                     <input type="text" name="name" required="" placeholder="Ваше имя">
                     <input type="text" name="org" placeholder="Организация">
                     <input type="email" name="email" required="" placeholder="E-mail">

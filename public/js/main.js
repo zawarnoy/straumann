@@ -226,7 +226,7 @@ function sendForm(form_id, res_div) {
 
     $.ajax({
         type: 'POST',
-        url: 'send.php',
+        url: 'send',
         data: msg,
         success: function (data) {
 

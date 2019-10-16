@@ -8,9 +8,8 @@ use Illuminate\Http\Request;
 
 class CityController extends Controller
 {
-    public function clinics(Request $request)
+    public function clinics(Request $request, $id)
     {
-        $id     = $request->get('id');
         $city   = null;
 
         if ((int)$id === 0) {
@@ -25,6 +24,12 @@ class CityController extends Controller
             'name'      => $city ? $city->name : 'Все города',
         ];
 
-        return view('clinics.parts.list_clinics', $params);
+        if ($request->ajax()) {
+            return view('clinics.parts.list_clinics', $params);
+        }
+
+        $params['cities'] = City::all();
+
+        return view('clinics.clinics', $params);
     }
 }

@@ -2,7 +2,7 @@
 
 Route::get('/', 'MainController@index')->name('main.index');
 
-Route::get('/clinics', 'ClinicController@index');
+Route::get('/clinics', 'ClinicController@index')->name('clinics.index');
 
 Route::get('/clinics/{id}', 'ClinicController@show');
 
@@ -10,7 +10,7 @@ Route::get('/contacts', 'ContactsController@index');
 
 Route::get('articles/{id}', 'ArticleController@show');
 
-Route::get('/cities/clinics', 'CityController@clinics');
+Route::get('/cities/{id}/clinics', 'CityController@clinics')->name('cities.show.clinics');
 
 Route::get('/advantages/{id}', 'AdvantageController@show')->name('advantage.show');
 

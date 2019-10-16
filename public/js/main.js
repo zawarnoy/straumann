@@ -109,7 +109,7 @@ $(document).ready(function () {
         $.fancybox.close(true);
     });
 
-    $(".wr").on("click", function (e) {
+    $("body").on("click", '.wr', function (e) {
         e.preventDefault();
 
         let link = $(this).children("a").attr("href");
@@ -278,6 +278,9 @@ $(document).ready(function () {
             c = document.createElement("DIV");
             c.setAttribute('data-id', selElmnt.options[j].getAttribute('value'));
             c.innerHTML = selElmnt.options[j].innerHTML;
+            if (selElmnt.options[j].getAttribute('selected') !== null) {
+                c.setAttribute('class', 'same-as-selected');
+            }
             c.addEventListener("click", function (e) {
                 /* When an item is clicked, update the original select box,
                 and the selected item: */
@@ -341,11 +344,15 @@ $(document).ready(function () {
         e.preventDefault();
 
         let $listClinics = $('.list__clinics'),
-            $stub = $('.stub');
+            $stub = $('.stub'),
+            id = $(this).attr('data-id'),
+            newUrl = '/cities/' + $(this).attr('data-id') + '/clinics';
 
         $stub.fadeIn(400);
 
-        $.get('/cities/clinics', {'id': $(this).attr('data-id')}, function (data) {
+
+        $.get(newUrl, function (data) {
+            history.pushState({}, null, id != 0 ? newUrl : '/clinics');
             $listClinics.html(data);
             $stub.fadeOut(400);
         });

@@ -14,10 +14,10 @@
         <div class="inner">
             <div class="custom-select select-city" style="width:300px;">
                 <select>
-                    <option value="">Все города</option>
+                    <option value="">{{ $name }}</option>
                     <option value="0">Все города</option>
                     @foreach ($cities as $city)
-                        <option value="{{ $city->id }}">{{ $city->name }}</option>
+                        <option {{ $name === $city->name ? 'selected' : '' }} value="{{ $city->id }}">{{ $city->name }}</option>
                     @endforeach
                 </select>
             </div>

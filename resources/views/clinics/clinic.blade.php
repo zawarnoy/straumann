@@ -6,6 +6,13 @@
 
     <section id="page__title">
         <div class="inner">
+            <div class="breadcrumbs">
+                <ul>
+                    <li><a href="#">Главная - </a></li>
+                    <li><a href="{{ $urlFrom }}">Клиники{{ isset($nameCityFrom) ? '('.$nameCityFrom.')' : '' }} - </a></li>
+                    <li class="active">{{ $clinic->name }}</li>
+                </ul>
+            </div>
             <div class="bt"><span>{{ $clinic->name }}</span></div>
             <div class="clearfix"></div>
         </div>
